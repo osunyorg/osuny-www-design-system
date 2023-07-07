@@ -1,2 +1,11 @@
 theme: osuny-hugo-theme-aaa
 params:
+  summary:
+    position: hero
+  breadcrumb:
+    position: after-hero
+  posts:
+    index:
+      layout: grid
+  organizations:
+    dark_logo_background: true
