@@ -1,5 +1,6 @@
 {{- $kind := .kind -}}
 {{ $items := .items }}
+{{ $context := .context }}
 {{ if $kind }}
   {{ $menu := partial "GetMenu" $kind }}
   {{ $items = $menu.items }}
@@ -20,12 +21,15 @@
     {{- $attr := "" -}}
     {{- $attr_title := "" -}}
     {{- $hasDropdown := false -}}
+    {{ if eq $context.RelPermalink .target }}
+      {{ $linkClass = "active" }}
+    {{ end }}
     {{- if gt (len .children) 0 -}}
       {{- $itemClass = printf "%shas-children" $itemClass -}}
     {{- end -}}
     {{- if and (gt (len .children) 0) $dropdown (eq $level 1) -}}
       {{- $hasDropdown = true -}}
-      {{- $attr = printf "id=\"dropdown-%s\" role=\"button\" aria-expanded=\"false\" aria-pressed=\"false\" tabindex=\"0\"" $slug -}}
+      {{- $attr = printf "id=\"dropdown-%s\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"" $slug -}}
     {{- end -}}
     {{- if and (hasPrefix .target "http") (eq .kind "url") -}}
       {{- $attr = " target=\"_blank\" rel=\"noreferrer\"" -}}
@@ -48,6 +52,7 @@
                 (dict
                   "items" .children
                   "level" $nextLevel
+                  "context" $context
                 ) -}}
         {{- else -}}
           {{- if and (eq $level 2) -}}
@@ -66,4 +71,8 @@
     </li>
     {{- end -}}
   {{ end -}}
+
+  {{ if and (eq $kind "primary") (site.Params.menu.i18n.display) }}
+    {{ partial "header/i18n.html" . }}
+  {{ end }}
 </ul>
