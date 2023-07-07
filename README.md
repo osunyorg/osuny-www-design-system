@@ -17,6 +17,7 @@ Dans `config/_default/config.yaml`
 ```yaml
 theme: osuny-www-design-system
 ```
+Penser à enlever les params déjà intégrés au thème
 
 ## Configurer le Sass
 
