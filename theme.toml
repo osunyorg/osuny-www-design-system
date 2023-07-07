@@ -1,0 +1,12 @@
+name = "Système de design Osuny"
+license = "MIT"
+licenselink = "https://github.com/noesya/osuny-www-design-system/blob/main/LICENSE"
+description = "Hugo theme for Osuny websites, based on Osuny"
+homepage = "https://www.osuny.org"
+tags = []
+features = []
+min_version = "0.91.0"
+
+[author]
+  name = "noesya"
+  homepage = "https://www.noesya.coop"
