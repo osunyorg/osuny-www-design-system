@@ -54,20 +54,18 @@ header#document-header
         margin-top: $spacing3
     .content
         padding-top: 0
-
-.hero:not(.hero--with-image)
-    .content > 
-        h1,
-        hgroup
-            text-align: center
-            margin-bottom: $spacing2
-            @include media-breakpoint-up(desktop)
-                margin-left: offset(2)
-                width: col(8)
-.hero
     @include media-breakpoint-down(desktop)
         .content > h1
             text-align: center
+    &:not(.hero--with-image)
+        .content > 
+            h1,
+            hgroup
+                text-align: center
+                margin-bottom: $spacing2
+                @include media-breakpoint-up(desktop)
+                    margin-left: offset(2)
+                    width: col(8)
 
 .toc-cta
     @include media-breakpoint-up(desktop)
@@ -75,13 +73,16 @@ header#document-header
             background: none
 
 .block-pages
+    &--cards .card
+        min-height: 200px
     @include media-breakpoint-up(desktop)
         @include in-page-without-sidebar
             padding-top: $spacing4
             padding-bottom: $spacing4
 
-.block-pages--cards .card
-    min-height: 200px
+.block .top .block-title + .description
+    margin-top: 0
+
 
 .block-call_to_action
     @include in-page-without-sidebar
@@ -114,6 +115,7 @@ header#document-header
 
 .organizations
     grid-row-gap: $spacing0
+
 .persons__page
     .hero
         hgroup
@@ -121,68 +123,3 @@ header#document-header
             h1,
             p
                 text-align: left
-
-footer#document-footer
-    .container
-        position: relative
-        &:first-of-type 
-            > * 
-                line-height: px2rem(28)
-            ul li 
-                margin-top: $spacing0
-    .footer-title
-        font-family: $serif-font-family
-        font-style: italic
-        font-size: px2rem(20)
-        line-height: px2rem(34)
-        margin-top: $spacing1
-    .footer-social
-        order: unset
-        text-align: left
-    @include media-breakpoint-up(desktop)
-        background: $color-background-alt
-        .container:first-of-type
-            @include grid(4)
-            ul li
-                @include meta
-        .container:last-of-type
-            @include grid(2)
-            align-items: flex-end
-            margin-top: $spacing1
-        .footer-site
-            &, a    
-                display: none // Pas de lien haut de page en desktop 
-        .footer-logo
-            text-align: right
-            margin-left: auto
-            width: col(4, 6)
-    @include media-breakpoint-down(xxl)
-        h2, 
-        .footer-credit,
-        .container:first-of-type ul li
-            font-size: $meta-size
-    @include media-breakpoint-up(xxl)
-        h2, 
-        .footer-credit
-            @include meta
-    @include media-breakpoint-down(desktop)
-        background: 
-            image: url('/assets/images/sun.svg'), linear-gradient($color-background, black)
-            position: center 680px
-            repeat: no-repeat
-            size: 1000px auto
-        padding-bottom: half($grid-gutter-sm)
-        .container:first-of-type > * + *
-            margin-top: $spacing2
-        .footer-title
-            display: none
-        .footer-site,
-        .footer-logo
-            text-align: center
-        .footer-logo
-            margin-top: $spacing4
-            margin-bottom: $spacing3
-            padding-bottom: $spacing1
-
-    h2
-        font-weight: bold
