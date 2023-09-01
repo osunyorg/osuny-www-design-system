@@ -73,12 +73,19 @@ header#document-header
             background: none
 
 .block-pages
-    &--cards .card
-        min-height: 200px
+    &--cards 
+        .card
+            min-height: 200px
     @include media-breakpoint-up(desktop)
         @include in-page-without-sidebar
             padding-top: $spacing4
             padding-bottom: $spacing4
+.document-content
+    > .block-pages:first-of-type
+        margin-top: 0
+        padding-top: $spacing2
+        @include media-breakpoint-down(desktop)
+            padding-top: 0
 
 .block .top .block-title + .description
     margin-top: 0
