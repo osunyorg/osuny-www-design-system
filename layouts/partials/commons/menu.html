@@ -58,8 +58,8 @@
           {{- if and (eq $level 2) -}}
             {{- $page := partial "GetPageByUrl" .target -}}
             {{ if $page }}
-              {{- if $page.Params.description_short }}
-                <p>{{ partial "PrepareText" $page.Params.description_short }}</p>
+              {{- if $page.Params.summary }}
+                <p>{{ partial "PrepareText" $page.Params.summary }}</p>
               {{ end -}}
             {{ end }}
           {{- end -}}
