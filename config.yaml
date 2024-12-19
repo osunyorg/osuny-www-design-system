@@ -1,5 +1,10 @@
 theme: osuny
 params:
+  menu:
+    primary:
+      level_2:
+        summary:
+          active: true
   summary:
     position: hero
   breadcrumb:
