@@ -13,15 +13,21 @@
   </div>
 </div>
 
+{{ if and site.Params.search.active (in site.Params.search.positions "footer") }}
+<div class="container footer-search">
+  {{ partial "commons/search/button.html" "footer" }}
+</div>
+{{ end }}
+
 <div class="container">
   {{ partial "footer/credit.html" }}
-    <div class="footer-logo">
-      <a class="logo" href="https://www.osuny.org">
-        <img src="/assets/images/logo.svg" alt="Osuny" height="455" width="1591" loading="lazy">
-      </a>
-      <p class="footer-title">Un commun numérique libre, sobre et accessible pour l'Enseignement Supérieur et la Recherche</p>
-    </div>
-  
+  <div class="footer-logo">
+    <a class="logo" href="https://www.osuny.org">
+      <img src="/assets/images/logo.svg" alt="Osuny" height="455" width="1591" loading="lazy">
+    </a>
+    <p class="footer-title">Un commun numérique libre, sobre et accessible pour l'Enseignement Supérieur et la Recherche</p>
+  </div>
+
   <div class="footer-site">
     {{ partial "footer/site.html" }}
   </div>
