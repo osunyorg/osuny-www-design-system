@@ -15,6 +15,11 @@ footer#document-footer
     .footer-social
         order: unset
         text-align: left
+    h2, 
+    .footer-credit
+        @include meta
+    h2
+        font-weight: bold
     @include media-breakpoint-up(desktop)
         background: $color-background-alt
         .container:first-of-type
@@ -34,16 +39,6 @@ footer#document-footer
             width: columns(4)
             img
                 margin-left: auto
-    @include media-breakpoint-down(xxl)
-        h2, 
-        .footer-credit,
-        .container:first-of-type ul li
-            font-size: $meta-size
-    @include media-breakpoint-up(xxl)
-        h2, 
-        .footer-credit
-            @include meta
-            font-weight: bold
     @include media-breakpoint-down(desktop)
         padding-bottom: var(--grid-gutter)
         background-image: linear-gradient($color-background, black)
@@ -60,6 +55,9 @@ footer#document-footer
                 repeat: no-repeat
                 size: 1000px auto
             z-index: -1
+        .logo
+            img
+                margin: 0 auto
         .container:first-of-type > * + *
             margin-top: $spacing-4
         .footer-title
@@ -68,6 +66,6 @@ footer#document-footer
         .footer-logo
             text-align: center
         .footer-logo
-            margin-top: $spacing-6
+            margin-top: $spacing-7
             margin-bottom: $spacing-5
-            padding-bottom: $spacing-3
+            padding-bottom: $spacing-4
