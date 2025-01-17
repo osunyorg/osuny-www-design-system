@@ -1,0 +1,32 @@
+
+.block-pages
+    &--cards 
+        .card
+            min-height: 200px
+    @include media-breakpoint-up(desktop)
+        @include in-page-without-sidebar
+            padding-top: $spacing-5
+            padding-bottom: $spacing-5
+
+.document-content
+    > .block-pages:first-of-type
+        margin-top: 0
+        padding-top: $spacing-4
+        @include media-breakpoint-down(desktop)
+            padding-top: 0
+
+.block .top .block-title + .description
+    margin-top: 0
+
+.block-gallery
+    &--grid
+        .gallery
+            align-items: start
+.block-call_to_action
+    @include in-page-without-sidebar
+        background-image: linear-gradient(68deg, rgba(255,196,0,1) 0%, rgba(255,241,0,1) 38%, rgba(255,143,0,1) 100%)
+    @include in-page-with-sidebar
+        .call_to_action > div
+            &, &::after
+                background-image: linear-gradient(68deg, rgba(255,196,0,1) 0%, rgba(255,241,0,1) 38%, rgba(255,143,0,1) 100%)
+                background-attachment: fixed

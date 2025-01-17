@@ -1,0 +1,73 @@
+footer#document-footer
+    .container
+        position: relative
+        &:first-of-type 
+            > * 
+                line-height: pxToRem(28)
+            ul li 
+                margin-top: $spacing-2
+    .footer-title
+        font-family: $font-adelphe
+        font-style: italic
+        font-size: pxToRem(20)
+        line-height: pxToRem(34)
+        margin-top: $spacing-3
+    .footer-social
+        order: unset
+        text-align: left
+    @include media-breakpoint-up(desktop)
+        background: $color-background-alt
+        .container:first-of-type
+            @include grid(4)
+            ul li
+                @include meta
+        .container:last-of-type
+            @include grid(2)
+            align-items: flex-end
+            margin-top: $spacing-3
+        .footer-site
+            &, a
+                display: none // Pas de lien haut de page en desktop 
+        .footer-logo
+            text-align: right
+            margin-left: auto
+            width: columns(4)
+            img
+                margin-left: auto
+    @include media-breakpoint-down(xxl)
+        h2, 
+        .footer-credit,
+        .container:first-of-type ul li
+            font-size: $meta-size
+    @include media-breakpoint-up(xxl)
+        h2, 
+        .footer-credit
+            @include meta
+            font-weight: bold
+    @include media-breakpoint-down(desktop)
+        padding-bottom: var(--grid-gutter)
+        background-image: linear-gradient($color-background, black)
+        &::after
+            position: absolute
+            bottom: 0px
+            left: 0
+            height: 680px
+            width: 100%
+            content: ''
+            background: 
+                image: url('/assets/images/sun.svg')
+                position: center 7px
+                repeat: no-repeat
+                size: 1000px auto
+            z-index: -1
+        .container:first-of-type > * + *
+            margin-top: $spacing-4
+        .footer-title
+            display: none
+        .footer-site,
+        .footer-logo
+            text-align: center
+        .footer-logo
+            margin-top: $spacing-6
+            margin-bottom: $spacing-5
+            padding-bottom: $spacing-3

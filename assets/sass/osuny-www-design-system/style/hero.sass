@@ -1,0 +1,21 @@
+
+.hero
+    padding-bottom: 0
+    margin-bottom: $spacing-3
+    .container
+        margin-top: $spacing-5
+    .content
+        padding-top: 0
+        p
+            font-style: italic
+    @include media-breakpoint-down(desktop)
+        .hero-text
+            text-align: center
+    &:not(.hero--with-image)
+        .hero-text
+            text-align: center
+            > h1, > hgroup
+                margin-bottom: $spacing-4
+        @include media-breakpoint-up(desktop)
+            .hero-text
+                width: 100%
