@@ -20,3 +20,6 @@ params:
   persons:
     single:
       backlinks: true
+  home:
+    head:
+      title: site
