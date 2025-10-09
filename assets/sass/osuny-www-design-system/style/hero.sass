@@ -1,6 +1,7 @@
 .hero
     display: flex
     .content
+        margin-bottom: $spacing-5
         h1
             span
                 @include body-text
@@ -11,6 +12,9 @@
         figure
             figcaption
                 display: none
+    &:not(.hero--with-image)
+        .content
+            margin-top: 30vh
     @include media-breakpoint-up(desktop)
         .content
             flex-direction: column-reverse
