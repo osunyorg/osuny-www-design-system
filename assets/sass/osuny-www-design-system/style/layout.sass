@@ -1,3 +1,25 @@
 .post
     .post-subtitle
         @include body-text
+.events__page
+    @include media-breakpoint-up(desktop)
+        .hero
+            .content
+                flex-direction: column
+                .hero-text
+                    display: block
+                    .hero-actions
+                        margin-left: 0
+                        margin-top: $spacing-4
+                figure
+                    width: columns(6) !important
+.projects__page
+    @include media-breakpoint-up(desktop)
+        .hero
+            .content
+                .hero-text
+                    padding-bottom: 0
+                .hero-actions
+                    .dropdown-share
+                        position: relative
+                        margin-left: offset(6)

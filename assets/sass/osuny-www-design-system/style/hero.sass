@@ -1,30 +1,30 @@
 .hero
     display: flex
-    border-bottom: 1px solid $color-border
     .content
         h1
             span
                 @include body-text
                 padding-top: $spacing-3
+                color: white
         p
             font-style: italic
+        figure
+            figcaption
+                display: none
     @include media-breakpoint-up(desktop)
         .content
-            margin-top: 20vh
-            flex-direction: column
+            flex-direction: column-reverse
             align-items: start !important
             .hero-text
                 width: 100%
                 hgroup
+                    width: 100%
                     display: flex
                     justify-content: space-between
-                    p, h1
-                        width: columns(6)
-                        margin: 0
+                p, h1
+                    width: columns(6)
+                    margin: 0
             figure
                 margin-top: $spacing-5
                 margin-left: offset(6)
-                width: columns(3)
-
-.breadcrumb-container
-    border-top: 1px solid $color-border
+                width: columns(4)
