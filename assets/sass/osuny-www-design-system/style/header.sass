@@ -1,18 +1,4 @@
 header#document-header
-    @include media-breakpoint-up(desktop)
-        .container
-            flex-direction: column
-            .logo
-                margin: 10px 0 30px
-    @include media-breakpoint-down(desktop)
-        nav
-            .logo
-                margin: auto
-                transform: translateX(18px)
-            button[type="button"]
-                align-self: flex-end
-                span:first-of-type
-                    display: none
     .dropdown-menu
         .nav-level-2
             .has-children.with-summary
@@ -31,6 +17,7 @@ header#document-header
                     margin-bottom: 10px
                 @include media-breakpoint-up(desktop)
                     margin-top: 10px
-
-
-
+    .upper-menu
+        a
+            &::after
+                content: none

@@ -21,7 +21,6 @@ footer#document-footer
     h2
         font-weight: bold
     @include media-breakpoint-up(desktop)
-        background: $color-background-alt
         .container:first-of-type
             @include grid(4)
             ul li
@@ -40,32 +39,10 @@ footer#document-footer
             img
                 margin-left: auto
     @include media-breakpoint-down(desktop)
-        padding-bottom: var(--grid-gutter)
-        background-image: linear-gradient($color-background, black)
-        &::after
-            position: absolute
-            bottom: 0px
-            left: 0
-            height: 680px
-            width: 100%
-            content: ''
-            background: 
-                image: url('/assets/images/sun.svg')
-                position: center 7px
-                repeat: no-repeat
-                size: 1000px auto
-            z-index: -1
         .logo
             img
                 margin: 0 auto
-        .container:first-of-type > * + *
-            margin-top: $spacing-4
         .footer-title
-            display: none
-        .footer-site,
-        .footer-logo
             text-align: center
         .footer-logo
             margin-top: $spacing-7
-            margin-bottom: $spacing-5
-            padding-bottom: $spacing-4

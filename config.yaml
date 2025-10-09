@@ -14,7 +14,6 @@ params:
     index:
       layout: grid
   organizations:
-    dark_logo_background: true
     single:
       backlinks: true
   persons:
@@ -23,3 +22,6 @@ params:
   home:
     head:
       title: site
+  logo:
+    header: "/assets/images/logo-black.svg"
+    footer: "/assets/images/logo.svg"
