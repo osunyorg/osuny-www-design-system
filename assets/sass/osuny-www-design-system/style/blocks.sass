@@ -1,16 +1,28 @@
 .blocks
-    .block
-        &.block-features
+    .block.block-
+        &features
             ul
                 @include media-breakpoint-up(desktop)
                     grid-template-columns: repeat(2, 1fr)
-        &.block-testimonials
+        &testimonials
             @include media-breakpoint-up(desktop)
                 padding-top: $spacing-4
-        &.block-gallery
+        &gallery
             &--carousel
                 padding-bottom: 0
                 padding-top: 0
+        &pages
+            &--large
+                .page
+                    @include media-breakpoint-up(desktop)
+                        &:nth-child(even)
+                            flex-direction: row-reverse
+                            // justify-content: space-between
+                            text-align: right
+                    .page-title
+                        a
+                            text-decoration: none
+
 
 // Pleine largeur
 body.full-width
