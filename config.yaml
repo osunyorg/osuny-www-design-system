@@ -1,6 +1,8 @@
 theme: osuny
 _merge: deep
 params:
+  search:
+    active: true
   menu:
     primary:
       level_2:
