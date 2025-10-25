@@ -1,17 +1,26 @@
 .blocks
-    .block.block-
-        &features
+    .block
+        &.block-call_to_action
+            .call_to_action
+                .description
+                    p
+                        font-weight: normal
+
+        &.block-chapter
+            &--alt_background,
+            &--accent_background
+                @include in-page-with-sidebar
+                    .chapter
+                        border-radius: $btn-border-radius
+        &.block-features
             ul
                 @include media-breakpoint-up(desktop)
                     grid-template-columns: repeat(2, 1fr)
-        &testimonials
-            @include media-breakpoint-up(desktop)
-                padding-top: $spacing-4
-        &gallery
+        &.block-gallery
             &--carousel
                 padding-bottom: 0
                 padding-top: 0
-        &pages
+        &.block-pages
             &--large
                 .page
                     @include media-breakpoint-up(desktop)
@@ -22,12 +31,9 @@
                     .page-title
                         a
                             text-decoration: none
-
-        &call_to_action
-            .call_to_action
-                .description
-                    p
-                        font-weight: normal
+        &.block-testimonials
+            @include media-breakpoint-up(desktop)
+                padding-top: $spacing-4
 // Pleine largeur
 body.full-width
     .blocks
