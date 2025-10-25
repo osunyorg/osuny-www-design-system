@@ -2,13 +2,14 @@
     display: flex
     border-bottom: 1px solid $color-border
     .content
-        margin-bottom: $spacing-5
+        margin-bottom: $grid-gutter
         padding-top: 0
+        // @include media-breakpoint-up(desktop)
+        //     margin-bottom: $spacing-5
         h1
             span
                 @include body-text
-                padding-top: $spacing-3
-                color: white
+                padding-top: $spacing-2
         p
             font-style: italic
         figure
@@ -17,6 +18,8 @@
     &:not(.hero--with-image)
         .content
             margin-top: 35vh
+    + .container
+        margin-top: 0
     @include media-breakpoint-up(desktop)
         .content
             flex-direction: column-reverse
@@ -34,3 +37,10 @@
                 margin-top: $spacing-5
                 margin-left: offset(6)
                 width: columns(4)
+
+    &--image-landscape
+        @include media-breakpoint-down(desktop)
+            .content
+                figure
+                    margin-left: 0
+                    margin-right: 0
