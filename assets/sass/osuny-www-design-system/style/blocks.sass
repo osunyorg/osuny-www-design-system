@@ -31,9 +31,21 @@
                     .page-title
                         a
                             text-decoration: none
+            &--cards
+                article
+                    border-radius: $btn-border-radius
         &.block-testimonials
             @include media-breakpoint-up(desktop)
                 padding-top: $spacing-4
+        &.block-links
+            &--cards
+                .links
+                    > li
+                        border-radius: $btn-border-radius
+                        .media img
+                            border-bottom-left-radius: 0
+                            border-bottom-right-radius: 0
+
 // Pleine largeur
 body.full-width
     .blocks
