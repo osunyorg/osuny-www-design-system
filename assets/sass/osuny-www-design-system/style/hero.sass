@@ -4,14 +4,9 @@
     .content
         margin-bottom: $grid-gutter
         padding-top: 0
-        // @include media-breakpoint-up(desktop)
-        //     margin-bottom: $spacing-5
         h1
             span
-                @include body-text
                 padding-top: $spacing-2
-        p
-            font-style: italic
         figure
             figcaption
                 display: none
@@ -37,6 +32,9 @@
                 margin-top: $spacing-5
                 margin-left: offset(6)
                 width: columns(4)
+                img
+                    aspect-ratio: 36/24
+                    object-fit: cover
 
     &--image-landscape
         @include media-breakpoint-down(desktop)
