@@ -1,0 +1,73 @@
+.blocks
+    @include in-page-without-sidebar
+        .block-title
+            text-align: center
+            h2
+                margin-left: auto
+                margin-right: auto
+    @include in-page-with-sidebar
+        .heading h2,
+        .block-call_to_action .block-content,
+        .block-chapter .block-content,
+        .block-contact .block-content,
+        .block-datatable .block-content,
+        .block-definitions .block-content,
+        .block-features .block-content,
+        .block-files .block-content,
+        .block-image .block-content,
+        .block-license .block-content,
+        .block-links .block-content,
+        .block-organizations .block-content,
+        .block-pages .block-content,
+        .block-persons .block-content,
+        .block-testimonials .block-content,
+        .block-timeline .block-content,
+        .block-video .block-content
+            // Blocs 2/8/2
+            padding-left: offset(2) !important
+            width: columns(10) !important
+            @include media-breakpoint-up(xxl)
+                // Blocs 3/6/3
+                padding-left: offset(3) !important
+                width: columns(9) !important
+        // Blocs pleine largeur
+        .block-gallery
+            .block-content
+                padding-left: 0 !important
+                width: 100%
+            &--grid
+                .gallery
+                    // Remettre en 4 colonnes
+                    @include flexbox-grid(4)
+                    // Dernière ligne centrée
+                    justify-content: center
+// Navigation full width
+.block-siblings-navigation
+    @include in-page-with-sidebar
+        .block-content
+            // Blocs 2/8/2
+            padding-left: offset(2) !important
+            width: columns(10)
+            @include media-breakpoint-up(xxl)
+                // Blocs 3/6/3
+                padding-left: offset(3) !important
+                width: columns(9)
+.toc-container
+    @include in-page-with-sidebar
+        border-top: none !important
+        .toc-content
+            width: columns(2)
+            li
+                a
+                    @include meta
+aside
+    @include in-page-with-sidebar
+        width: columns(2)
+        li
+            border-bottom: none !important
+            display: block !important
+            text-align: left
+            ul
+                padding-left: 0
+                li
+                    margin-left: 0 !important
