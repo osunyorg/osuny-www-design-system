@@ -11,7 +11,7 @@ params:
   summary:
     position: hero
   breadcrumb:
-    position: after-hero
+    position: hero-between
   posts:
     index:
       layout: grid
@@ -25,5 +25,5 @@ params:
     head:
       title: site
   logo:
-    header: "/assets/images/logo-black.svg"
-    footer: "/assets/images/logo.svg"
+    header: ""
+    footer: ""

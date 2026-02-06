@@ -1,46 +1,31 @@
 .hero
-    display: flex
-    border-bottom: 1px solid $color-border
-    .content
-        margin-bottom: $grid-gutter
-        padding-top: 0
-        // @include media-breakpoint-up(desktop)
-        //     margin-bottom: $spacing-5
-        h1
-            span
-                @include body-text
-                padding-top: $spacing-2
-        p
-            font-style: italic
-        figure
-            figcaption
-                display: none
-    &:not(.hero--with-image)
+    &.hero--image-landscape
         .content
-            margin-top: 35vh
-    + .container
-        margin-top: 0
-    @include media-breakpoint-up(desktop)
-        .content
-            flex-direction: column-reverse
-            align-items: start !important
-            .hero-text
-                width: 100%
-                hgroup
-                    width: 100%
-                    display: flex
-                    justify-content: space-between
-                p, h1
-                    width: columns(6)
-                    margin: 0
             figure
-                margin-top: $spacing-5
-                margin-left: offset(6)
+                width: 100%
+    .content
+        @include media-breakpoint-up(desktop)
+            .hero-text
+                align-items: center
+                width: 100%
+                text-align: center
+                h1
+                    span
+                        @include h2
+                        color: $color-text
+                        margin-top: $spacing-3
+                p
+                    margin-top: $spacing-3
+            figure
                 width: columns(4)
+                margin-top: $spacing-6
+        @include media-breakpoint-up(xxl)
+            display: flex
+            .hero-text
+                width: columns(10)
 
-    &--image-landscape
-        @include media-breakpoint-down(desktop)
-            .content
-                figure
-                    margin-left: 0
-                    margin-right: 0
+@include media-breakpoint-up(desktop)
+    #breadcrumb
+        justify-content: center
+        padding-right: 0
+        margin-top: $spacing-5
