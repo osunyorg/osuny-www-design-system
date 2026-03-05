@@ -1,0 +1,26 @@
+.page__home
+    .hero
+        background: $color-background-alt
+        @include media-breakpoint-up(desktop)
+            .container
+                .content
+                    flex-direction: column-reverse
+                    .hero-text
+                        width: 100%
+                        margin-top: 0
+                        hgroup
+                            display: block
+                            margin-bottom: 0
+                            h1,
+                            p
+                                width: 100%
+                                text-align: left
+                            p
+                                @include body-text
+                    figure
+                        width: 100%
+                        padding-left: 0
+                        img
+                            height: 60vh
+                            width: auto
+                            margin: 0 auto

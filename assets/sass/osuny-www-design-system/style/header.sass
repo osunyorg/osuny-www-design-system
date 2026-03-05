@@ -1,25 +1,2 @@
-header#document-header
-    .dropdown-menu
-        .nav-level-2
-            .has-children.with-summary
-                a::before
-                    content: none
-                a + p
-                    display: none
-            .with-summary
-                p
-                    font-family: $font-adelphe
-                    font-style: italic
-        li
-            p
-                @extend .small
-                line-height: 150%
-                display: block
-                @include media-breakpoint-down(desktop)
-                    margin-bottom: 10px
-                @include media-breakpoint-up(desktop)
-                    margin-top: 10px
-    .upper-menu
-        a
-            &::after
-                content: none
+.upper-menu
+    display: none
