@@ -3,11 +3,6 @@ _merge: deep
 params:
   search:
     active: true
-  menu:
-    primary:
-      level_2:
-        summary:
-          active: true
   summary:
     position: hero
   breadcrumb:
