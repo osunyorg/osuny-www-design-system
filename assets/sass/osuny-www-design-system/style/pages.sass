@@ -1,0 +1,23 @@
+.pages__section
+    @include media-breakpoint-up(desktop)
+        .hero
+            .container
+                .content
+                    flex-direction: column
+                    .hero-text
+                        width: 100%
+                        padding-bottom: 0
+                        margin-bottom: $spacing-5
+                        hgroup
+                            width: 100%
+                            display: flex
+                            justify-content: space-between
+                            h1
+                                width: columns(4)
+                            p
+                                width: columns(8)
+                                margin-top: pxToRem(10)
+                                text-align: center
+                    figure
+                        width: 100%
+                        padding-left: offset(4)
