@@ -1,31 +1,19 @@
-.hero
-    &.hero--image-landscape
-        .content
-            figure
-                width: 100%
-    .content
-        @include media-breakpoint-up(desktop)
-            .hero-text
-                align-items: center
-                width: 100%
-                text-align: center
-                h1
-                    span
-                        @include h2
-                        color: $color-text
-                        margin-top: $spacing-3
-                p
-                    margin-top: $spacing-3
-            figure
-                width: columns(4)
-                margin-top: $spacing-6
-        @include media-breakpoint-up(xxl)
-            display: flex
-            .hero-text
-                width: columns(10)
-
 @include media-breakpoint-up(desktop)
-    #breadcrumb
-        justify-content: center
-        padding-right: 0
-        margin-top: $spacing-5
+    .hero
+        .container
+            .content
+                flex-direction: column
+                .hero-text
+                    width: 100%
+                    hgroup
+                        display: flex
+                        justify-content: space-between
+                        margin-bottom: $spacing-5
+                        h1
+                            width: columns(4)
+                        p
+                            width: columns(8)
+                            text-align: center
+                figure
+                    width: 100%
+                    padding-left: offset(4)
