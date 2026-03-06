@@ -5,6 +5,16 @@ header#document-header
     .upper-menu
         display: none !important
     // TODO end
+    .menu-class-cta
+        a
+            @include button-reversed
+            color: black !important
+            padding: $spacing-2 $spacing-1 !important
+            border: 1px solid white !important
+            font-weight: normal !important
+            &:hover
+                background: black
+                color: white !important
     .primary-menu
         .header-button
             display: flex
@@ -56,6 +66,7 @@ header#document-header
                             padding: 0
                 .nav-level-2
                     margin-left: pxToRem(8)
+
 .has-menu-opened
     header#document-header
         .logo

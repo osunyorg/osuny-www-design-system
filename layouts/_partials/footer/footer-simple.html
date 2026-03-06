@@ -1,23 +1,21 @@
 <div class="container">
-  <div class="footer-logo">
-    {{ partial "footer/logo.html" }}
+  <div class="footer-top">
+    <div class="footer-logo">
+      {{ partial "footer/logo.html" }}
+    </div>
+    <div class="footer-baseline">
+      Souverain, sécurisé, accessible et sobre
+    </div>
   </div>
-  <div class="footer-site">
-    Souverain, sécurisé, accessible et sobre
-  </div>
-</div>
-
-<div class="container">
-  <div class="footer-social">
-    {{ partial "footer/social.html" . }}
+  <div class="footer-menu">
+    {{ partial "commons/menu.html" (dict
+      "kind" "footer"
+      "class" "nav-footer"
+      "context" .
+    ) }}
   </div>
   <div class="footer-legals">
     {{ partial "footer/legals.html" . }}
-    {{ if and site.Params.search.active (in site.Params.search.positions "footer") }}
-      <div class="footer-search">
-        {{ partial "commons/search/button.html" "footer" }}
-      </div>
-    {{ end }}
     {{ partial "footer/credit.html" . }}
   </div>
 </div>

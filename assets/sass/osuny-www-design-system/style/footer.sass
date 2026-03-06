@@ -2,14 +2,61 @@ footer#document-footer
     border-top: $color-border 1px solid
     padding-bottom: var(--grid-gutter)
     padding-top: var(--grid-gutter)
-    @include media-breakpoint-up(desktop)
-        .container:first-of-type
-            display: flex
-            .footer-logo
-                width: columns(4)
-            .footer-site
-                margin-top: pxToRem(-4)
-                text-align: left
-                width: columns(8)
-    .footer-site
-        font-size: var(--h2-size)
+    .container
+        .footer-logo
+            margin-bottom: $spacing-4
+        .footer-baseline
+            font-size: var(--h2-size)
+        .footer-menu
+            .nav-footer
+                @include small
+                > li
+                    margin-top: $spacing-3
+                    > span,
+                    > a
+                        font-weight: bold
+                    .nav-level-2
+                        margin-top: $spacing-2
+                        margin-left: pxToRem(8)
+        .footer-legals
+            @include meta
+            .footer-credit
+                margin-top: $spacing-2
+        @include media-breakpoint-up(desktop)
+            display: block
+            padding-bottom: 0
+            .footer-top
+                display: flex
+                .footer-logo
+                    width: offset(4)
+                .footer-baseline
+                    margin-top: pxToRem(7)
+                    text-align: left
+                    width: columns(8)
+            .footer-menu
+                margin-top: $spacing-6
+                padding-left: offset(4)
+                .nav-footer
+                    display: flex
+                    @include small
+                    li
+                        margin-top: 0 !important
+                    > li
+                        width: columns(2)
+                        margin-right: var(--grid-gutter)
+                        &:nth-of-type(4)
+                            margin-right: 0
+                        .nav-level-2
+                            margin-top: 0
+            .footer-legals
+                margin-top: $spacing-6
+                display: block
+                padding-left: offset(4)
+                .nav-legal
+                    display: inline-block
+                    li
+                        display: inline-block
+                        margin-right: $spacing-3
+                .footer-credit
+                    margin-top: 0
+                    display: inline-block
