@@ -2,3 +2,24 @@
     .description
         p
             font-family: $font-inclusive !important
+.block-pages
+    &--list
+        @include in-page-with-sidebar
+            .pages
+                article
+                    .page-content
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        text-align: center
+                        .page-title
+                            font-size: pxToRem(32)
+                            a
+                                &::after
+                                    content: ""
+                        p
+                            font-size: pxToRem(32)
+                            font-family: $font-adelphe
+                            line-height: 130%
+                    .media
+                        width: columns(3)
