@@ -1,10 +1,39 @@
+.block
+    @include in-page-without-sidebar
+        .top
+            position: absolute
+
 .block-call_to_action
     .description
         p
             font-family: $font-inclusive !important
+.block-chapter
+    &--accent_background
+        margin-top: $spacing-5 !important
+        @include in-page-without-sidebar
+            .chapter
+                justify-content: center
+        .chapter
+            .text
+                padding: 0 !important
+                font-size: var(--h2-size)
+                line-height: 120%
+                text-align: center
+.block-organizations
+    &--grid
+        @include in-page-without-sidebar
+            .organizations
+                padding-left: offset(4)
+                grid-template-columns: repeat(4, 1fr)
 .block-pages
+    @include in-page-without-sidebar
+        .pages
+            padding-left: offset(4)
     &--list
-        @include in-page-with-sidebar
+        @include in-page-without-sidebar
+            .pages
+                grid-template-columns: repeat(1, 1fr) !important
+        @include in-page-with-or-without-sidebar
             .pages
                 article
                     .page-content
@@ -23,3 +52,10 @@
                             line-height: 130%
                     .media
                         width: columns(3)
+.block-projects
+    &--grid
+        .projects--grid
+            grid-template-columns: repeat(3, 1fr)
+        @include in-page-without-sidebar
+            .projects--grid
+                padding-left: offset(4)
