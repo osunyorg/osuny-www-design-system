@@ -28,11 +28,10 @@ header#document-header
                         font-weight: bold
                         padding-bottom: pxToRem(8)
             .nav-level-2
-                margin-left: pxToRem(8)
                 > li
                     > a
                         @include small
-        @include media-breakpoint-up(mobile)
+        @include media-breakpoint-down(mobile)
             #navigation
                 padding-top: 0
         @include media-breakpoint-up(desktop)
@@ -55,11 +54,25 @@ header#document-header
                         > a,
                         > span
                             padding: 0
+                .nav-level-2
+                    margin-left: pxToRem(8)
 .has-menu-opened
+    header#document-header
+        .logo
+            filter: invert(1)
+    @include media-breakpoint-down(desktop)
+        header#document-header
+            background: black !important
+            color: white !important
+            nav
+                min-height: 100vh
+            .nav-level-2
+                li
+                    display: inline-table
+                    a:before
+                        content: "→ "
     @include media-breakpoint-up(desktop)
         header#document-header
-            .logo
-                filter: invert(1)
             .primary-menu
                 .header-button
                     color: white
