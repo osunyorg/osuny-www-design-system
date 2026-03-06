@@ -1,7 +1,8 @@
 .block
     @include in-page-without-sidebar
-        .top
-            position: absolute
+        &:not(.with-description)
+            .top
+                position: absolute
 
 .block-call_to_action
     .description
