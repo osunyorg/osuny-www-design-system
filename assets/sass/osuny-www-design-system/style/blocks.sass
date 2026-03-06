@@ -1,9 +1,3 @@
-.block
-    @include in-page-without-sidebar
-        &:not(.with-description)
-            .top
-                position: absolute
-
 .block-call_to_action
     .description
         p
@@ -23,11 +17,17 @@
 .block-organizations
     &--grid
         @include in-page-without-sidebar
+            &:not(.with-description)
+                .top
+                    position: absolute
             .organizations
                 padding-left: offset(4)
                 grid-template-columns: repeat(4, 1fr)
 .block-pages
     @include in-page-without-sidebar
+        &:not(.with-description)
+            .top
+                position: absolute
         .pages
             padding-left: offset(4)
     &--list
@@ -58,5 +58,8 @@
         .projects--grid
             grid-template-columns: repeat(3, 1fr)
         @include in-page-without-sidebar
+            &:not(.with-description)
+                .top
+                    position: absolute
             .projects--grid
                 padding-left: offset(4)
