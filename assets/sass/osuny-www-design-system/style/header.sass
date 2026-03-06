@@ -1,3 +1,67 @@
-#document-header
+header#document-header
+    background: none
+    transform: none !important
+    // TODO Remove that
     .upper-menu
-        display: none
+        display: none !important
+    // TODO end
+    .primary-menu
+        .header-button
+            display: flex
+            align-items: center
+            flex-direction: row-reverse
+            &[aria-expanded="true"]
+                span:last-of-type::before
+                    transform: translateY(1px)
+            span:first-of-type
+                @include small
+                text-transform: none
+            span:last-of-type::before
+                content: "●"
+        #navigation
+            .nav-level-1
+                > li
+                    border-bottom: none
+                    > a,
+                    > span
+                        @include body-text
+                        font-weight: bold
+                        padding-bottom: pxToRem(8)
+            .nav-level-2
+                margin-left: pxToRem(8)
+                > li
+                    > a
+                        @include small
+        @include media-breakpoint-up(mobile)
+            #navigation
+                padding-top: 0
+        @include media-breakpoint-up(desktop)
+            background: none
+            #navigation
+                position: fixed
+                top: -100%
+                transition: all 0.25s
+                background: black
+                left: 0
+                right: 0
+                padding: var(--grid-gutter)
+                padding-top: $spacing-6
+                z-index: -1
+                *
+                    color: white
+                .nav-level-1
+                    > li
+                        width: columns(2)
+                        > a,
+                        > span
+                            padding: 0
+.has-menu-opened
+    @include media-breakpoint-up(desktop)
+        header#document-header
+            .logo
+                filter: invert(1)
+            .primary-menu
+                .header-button
+                    color: white
+                #navigation
+                    top: 0
