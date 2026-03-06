@@ -30,6 +30,19 @@
                 position: absolute
         .pages
             padding-left: offset(4)
+        &--large
+            .pages
+                .page
+                    flex-direction: column
+                    align-items: start
+                    .page-content
+                        padding-left: offset(1)
+                        width: columns(6)
+                        padding-right: 0
+                    .media
+                        width: 100%
+                        img
+                            aspect-ratio: auto
     &--list
         @include in-page-without-sidebar
             .pages
