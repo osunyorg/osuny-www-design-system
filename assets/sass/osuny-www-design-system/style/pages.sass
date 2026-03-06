@@ -13,11 +13,25 @@
                             display: flex
                             justify-content: space-between
                             h1
-                                width: columns(4)
+                                position: fixed
+                                z-index: 0
                             p
-                                width: columns(8)
+                                padding-left: offset(4)
+                                // width: columns(8)
                                 margin-top: pxToRem(10)
                                 text-align: center
                     figure
                         width: 100%
                         padding-left: offset(4)
+
+        main
+            .toc-container
+                .toc-content
+                    top: pxToRem(300) !important
+                    .active
+                        &::before
+                            content: "●"
+                            margin-right: $spacing-1
+    .breadcrumb-container
+        .breadcrumb-nav
+            padding-left: offset(4)
