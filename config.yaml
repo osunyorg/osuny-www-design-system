@@ -28,3 +28,8 @@ params:
     primary:
       level_1:
         dropdown: false
+  components:
+    lightbox:
+      disabled: false
+      in_hero:
+        disabled: true

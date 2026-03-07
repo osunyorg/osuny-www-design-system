@@ -6,12 +6,17 @@ header#document-header
         display: none !important
     // TODO end
     .menu-class-cta
+        @include media-breakpoint-down(desktop)
+            text-align: right
         a
             @include button-reversed
             color: $color-text !important
-            padding: $spacing-2 $spacing-1 !important
             border: 1px solid $color-background !important
             font-weight: normal !important
+            padding: $spacing-2 $spacing-1 !important            
+            @include media-breakpoint-down(desktop)
+                padding-left: $spacing-3 !important
+                padding-right: $spacing-3 !important
             &:hover
                 background: $color-text
                 color: $color-background !important
@@ -41,7 +46,7 @@ header#document-header
                 > li
                     > a
                         @include small
-        @include media-breakpoint-down(mobile)
+        @include media-breakpoint-down(desktop)
             #navigation
                 padding-top: 0
         @include media-breakpoint-up(desktop)
