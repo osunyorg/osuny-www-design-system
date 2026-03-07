@@ -3,6 +3,8 @@ _merge: deep
 params:
   search:
     active: true
+    positions:
+      - footer
   summary:
     position: hero
   breadcrumb:

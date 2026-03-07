@@ -14,6 +14,11 @@
       "context" .
     ) }}
   </div>
+  {{ if and site.Params.search.active (in site.Params.search.positions "footer") }}
+    <div class="footer-search">
+      {{ partial "commons/search/button.html" "footer" }}
+    </div>
+  {{ end }}
   <div class="footer-legals">
     {{ partial "footer/legals.html" . }}
     {{ partial "footer/credit.html" . }}
