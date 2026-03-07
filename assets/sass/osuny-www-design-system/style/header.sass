@@ -8,13 +8,13 @@ header#document-header
     .menu-class-cta
         a
             @include button-reversed
-            color: black !important
+            color: $color-text !important
             padding: $spacing-2 $spacing-1 !important
-            border: 1px solid white !important
+            border: 1px solid $color-background !important
             font-weight: normal !important
             &:hover
-                background: black
-                color: white !important
+                background: $color-text
+                color: $color-background !important
     .primary-menu
         .header-button
             display: flex
@@ -50,14 +50,14 @@ header#document-header
                 position: fixed
                 top: -100%
                 transition: all 0.25s
-                background: black
+                background: $color-text
                 left: 0
                 right: 0
                 padding: var(--grid-gutter)
                 padding-top: $spacing-6
                 z-index: -1
                 *
-                    color: white
+                    color: $color-background
                 .nav-level-1
                     > li
                         width: offset(2)
@@ -73,8 +73,8 @@ header#document-header
             filter: invert(1)
     @include media-breakpoint-down(desktop)
         header#document-header
-            background: black !important
-            color: white !important
+            background: $color-text !important
+            color: $color-background !important
             nav
                 min-height: 100vh
             .nav-level-2
@@ -87,6 +87,6 @@ header#document-header
         header#document-header
             .primary-menu
                 .header-button
-                    color: white
+                    color: $color-background
                 #navigation
                     top: 0
