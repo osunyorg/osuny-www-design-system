@@ -1,0 +1,161 @@
+---
+title: Footer
+items:
+- title: Découvrir
+  slug: decouvrir
+  target: ''
+  kind: blank
+  new_tab: false
+  children:
+  - title: Fonctionnalités
+    slug: fonctionnalites
+    target: "https://www.osuny.org/fonctionnalites/"
+    kind: url
+    new_tab: false
+  - title: Engagements
+    slug: engagements
+    target: "https://www.osuny.org/engagements/"
+    kind: url
+    new_tab: false
+  - title: Secteurs
+    slug: secteurs
+    target: "https://www.osuny.org/secteurs/"
+    kind: url
+    new_tab: false
+  - title: Tarifs
+    slug: tarifs
+    target: "https://www.osuny.org/tarifs/"
+    kind: url
+    new_tab: false
+  - title: Tester Osuny
+    slug: tester-osuny
+    target: "https://www.osuny.org/tester/"
+    kind: page
+    new_tab: false
+- title: Faire
+  slug: faire
+  target: ''
+  kind: blank
+  new_tab: false
+  children:
+  - title: Thème Figma
+    slug: theme-figma
+    target: https://www.figma.com/community/file/1176490763864113451
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Composants Figma
+    slug: composants-figma
+    target: https://www.figma.com/community/file/1603458462925139458
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Dev
+    slug: dev
+    target: https://developers.osuny.org
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Aide
+    slug: aide
+    target: https://support.osuny.org
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  descendants_targets:
+  - https://developers.osuny.org
+  - https://support.osuny.org
+  - https://www.figma.com/community/file/1176490763864113451
+  - https://www.figma.com/community/file/1603458462925139458
+- title: Prendre soin
+  slug: prendre-soin
+  target: ''
+  kind: blank
+  new_tab: false
+  children:
+  - title: Transparence
+    slug: transparence
+    target: https://transparence.osuny.org
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Roadmap
+    slug: roadmpa
+    target: https://roadmap.osuny.org
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Sites créés
+    slug: sites-crees
+    target: https://showcase.osuny.org
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  descendants_targets:
+  - https://showcase.osuny.org
+  - https://transparence.osuny.org
+- title: Suivre
+  slug: suivre
+  target: ''
+  kind: blank
+  new_tab: false
+  children:
+  - title: Mastodon
+    slug: mastodon
+    target: https://mastodon.social/@osuny
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Github
+    slug: github
+    target: https://github.com/osunyorg/
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Gitlab
+    slug: gitlab
+    target: https://gitlab.com/osuny
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: LinkedIn
+    slug: linkedin
+    target: https://www.linkedin.com/company/osuny/
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  - title: Presse
+    slug: presse
+    target: "/espace-presse/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/espace-presse"
+    file: content/fr/pages/espace-presse/_index.html
+  - title: Statut
+    slug: statut
+    target: https://status.osuny.org
+    kind: url
+    new_tab: true
+    children: []
+    descendants_targets: []
+  descendants_targets:
+  - "/espace-presse/"
+  - https://github.com/osunyorg/
+  - https://gitlab.com/osuny
+  - https://mastodon.social/@osuny
+  - https://status.osuny.org
+  - https://www.linkedin.com/company/osuny/
+

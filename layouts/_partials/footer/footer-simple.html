@@ -9,7 +9,7 @@
   </div>
   <div class="footer-menu">
     {{ partial "commons/menu.html" (dict
-      "kind" "footer"
+      "kind" "ecosystem-footer"
       "class" "nav-footer"
       "context" .
     ) }}
@@ -20,7 +20,11 @@
     </div>
   {{ end }}
   <div class="footer-legals">
-    {{ partial "footer/legals.html" . }}
+    {{ partial "commons/menu.html" (dict
+      "kind" "ecosystem-legal"
+      "class" "nav-legal"
+      "context" .
+    ) }}
     {{ partial "footer/credit.html" . }}
   </div>
 </div>
