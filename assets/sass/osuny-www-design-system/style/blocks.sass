@@ -28,10 +28,14 @@
         &:not(.with-description)
             .top
                 position: absolute
-        .pages
-            padding-left: offset(4)
-        &--large
+    &--grid
+        @include in-page-without-sidebar
             .pages
+                padding-left: offset(4)
+    &--large
+        @include in-page-without-sidebar
+            .pages
+                padding-left: offset(4)
                 .page
                     flex-direction: column
                     align-items: start
@@ -45,6 +49,8 @@
                             aspect-ratio: auto
     &--list
         @include in-page-without-sidebar
+            &.with-images
+                padding-left: offset(4)
             .pages
                 grid-template-columns: repeat(1, 1fr) !important
         @include in-page-with-or-without-sidebar
