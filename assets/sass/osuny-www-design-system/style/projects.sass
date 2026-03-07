@@ -1,0 +1,67 @@
+.projects__section
+    @include media-breakpoint-up(desktop)
+        .projects--grid
+            grid-template-columns: repeat(3, 1fr)
+            .project
+                margin-bottom: $spacing-5
+                .project-content
+                    .project-title
+                        @include meta
+                .media
+                    background: $color-background-alt
+                    padding: $spacing-5
+                    margin-bottom: $spacing-1
+                    
+.projects__page
+    .hero
+        .container
+            .project-infos
+                display: none
+    @include media-breakpoint-up(desktop)
+        .hero
+            .container
+                .content
+                    flex-direction: column
+                    .hero-text
+                        width: 100%
+                        padding-bottom: 0
+                        margin-bottom: $spacing-5
+                        hgroup
+                            width: 100%
+                            display: flex
+                            justify-content: space-between
+                            h1
+                                position: absolute
+                                width: columns(4)
+                                z-index: 0
+                            p
+                                padding-left: offset(4)
+                                width: 100%
+                                margin-top: pxToRem(10)
+                                text-align: center
+                        .hero-actions
+                            position: absolute
+                            bottom: 0
+                    figure
+                        background: $color-background-alt
+                        padding: $spacing-5
+                        width: columns(8)
+                        margin-left: offset(4)
+                        figcaption
+                            position: relative
+                            &::before
+                                background: none
+                            .credit
+                                background: none
+                                display: block
+
+        main
+            .toc-container
+                .toc-content
+                    top: pxToRem(300) !important
+                    .active
+                        &::before
+                            content: "●"
+                            margin-right: $spacing-1
+    .siblings-navigation
+        display: none

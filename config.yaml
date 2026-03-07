@@ -15,6 +15,12 @@ params:
   organizations:
     single:
       backlinks: true
+  projects:
+    index:
+      options:
+        summary: false
+    share_links:
+      enabled: false
   persons:
     single:
       backlinks: true
