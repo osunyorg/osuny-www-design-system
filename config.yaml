@@ -22,8 +22,8 @@ params:
     head:
       title: site
   logo:
-    header: '/assets/images/logo.svg'
-    footer: '/assets/images/logo.svg'
+    header: '/assets/images/logo-osuny.svg'
+    footer: '/assets/images/logo-osuny.svg'
   menu:
     primary:
       level_1:
