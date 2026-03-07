@@ -1,0 +1,28 @@
+.block-organizations
+    &--grid
+        @include in-page-without-sidebar
+            &:not(.with-description)
+                .top
+                    position: absolute
+            .organizations
+                padding-left: offset(4)
+                grid-template-columns: repeat(4, 1fr)
+
+    .organization-content
+        display: none
+    .organizations--grid
+        grid-gap: 0 var(--grid-gutter)
+    .organization
+        .media
+            border: none
+            padding: 0
+            margin-bottom: $spacing-5
+            picture
+                max-width: pxToRem(150)
+                max-height: pxToRem(60)
+                img
+                    filter: saturate(0)
+                    object-position: left
+                    &:hover
+                        filter: none
+                        
