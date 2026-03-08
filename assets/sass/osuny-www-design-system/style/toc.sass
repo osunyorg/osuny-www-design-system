@@ -6,3 +6,9 @@
             ol
                 li
                     @include meta
+                    a
+                        color: $color-text-alt
+                        &.active
+                            color: $color-text
+                            &::before
+                                content: "● "
