@@ -1,16 +1,23 @@
-.projects__section
-    @include media-breakpoint-up(desktop)
-        .projects--grid
+.projects
+    &--grid
+        .project
+            .project-content
+                .project-title
+                    @include meta
+            .media
+                margin-left: 0
+                margin-right: 0
+                margin-bottom: $spacing-2
+        @include media-breakpoint-up(desktop)
             grid-template-columns: repeat(3, 1fr)
             .project
                 margin-bottom: $spacing-5
-                .project-content
-                    .project-title
-                        @include meta
-                .media
-                    background: $color-background-alt
-                    padding: $spacing-5
-                    margin-bottom: $spacing-1
+.projects__section
+    .project
+        .media
+            background: $color-background-alt
+            padding: $spacing-5
+            margin-bottom: $spacing-1
 
 .projects__page
     .hero

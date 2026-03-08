@@ -1,15 +1,17 @@
 .block-projects
     &--grid
         background: $color-background-alt
-        padding-top: $spacing-5
+        padding-bottom: var(--grid-gutter)
+        padding-top: var(--grid-gutter)
+        @include media-breakpoint-up(desktop)
+            .projects--grid
+                display: flex
+                justify-content: space-between
+                .project
+                    width: columns(3)
+                    margin-bottom: $spacing-4
         .projects--grid
-            display: flex
-            justify-content: space-between
-            .project
-                width: columns(3)
-                margin-bottom: $spacing-4
-                .project-content
-                    .project-title
-                        @include meta
-                .media
-                    margin-bottom: $spacing-2
+            li
+                margin-top: 0
+                .project
+                    margin-bottom: $spacing-4
