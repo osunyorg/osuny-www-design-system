@@ -1,5 +1,6 @@
 .hero
     .content
+        padding-top: 0
         .hero-actions
             a
                 padding-left: $spacing-3
@@ -21,12 +22,11 @@
                             display: flex
                             justify-content: space-between
                             h1
-                                position: absolute
+                                position: relative
                                 width: columns(4)
                                 z-index: 0
                             p
-                                padding-left: offset(4)
-                                width: 100%
+                                width: columns(8)
                                 margin-top: pxToRem(10)
                                 text-align: center
                     figure
