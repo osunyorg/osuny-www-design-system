@@ -22,8 +22,20 @@
 .projects__page
     .hero
         .container
-            .project-infos
-                display: none
+            .content
+                .project-infos
+                    display: none
+                figure
+                    background: $color-background-alt
+    @include media-breakpoint-down(desktop)
+        .hero
+            .container
+                .content
+                    figure
+                        margin-left: var(--grid-gutter-negative)
+                        margin-right: var(--grid-gutter-negative)
+                        padding: var(--grid-gutter)
+                        background: $color-background-alt
     @include media-breakpoint-up(desktop)
         .hero
             .container
@@ -33,7 +45,6 @@
                             position: absolute
                             bottom: 0
                     figure
-                        background: $color-background-alt
                         padding: $spacing-5
                         figcaption
                             position: relative
