@@ -40,6 +40,9 @@ items:
   slug: prendre-soin
   kind: blank
   children:
+  - title: Le commun Osuny
+    slug: commun
+    target: https://commun.osuny.org
   - title: Transparence
     slug: transparence
     target: https://transparence.osuny.org
