@@ -5,7 +5,8 @@
                 padding-left: $spacing-3
                 padding-right: $spacing-3
 .pages__section,
-.projects__section
+.projects__section,
+.projects__page
     @include media-breakpoint-up(desktop)
         .hero
             .container
@@ -29,5 +30,5 @@
                                 margin-top: pxToRem(10)
                                 text-align: center
                     figure
-                        width: 100%
-                        padding-left: offset(4)
+                        width: columns(8)
+                        margin-left: offset(4)
