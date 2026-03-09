@@ -40,5 +40,8 @@ params:
     active: true
     positions:
       - footer
+  seo:
+    title:
+      separator: "•"
   summary:
     position: hero
