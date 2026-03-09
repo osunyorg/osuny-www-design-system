@@ -59,12 +59,13 @@ header#document-header
                 background: $color-text
                 left: 0
                 right: 0
-                padding: var(--grid-gutter)
+                padding-bottom: var(--grid-gutter)
                 padding-top: $spacing-6
                 z-index: -1
                 *
                     color: $color-background
                 .nav-level-1
+                    @include container
                     > li
                         width: offset(2)
                         > a,
