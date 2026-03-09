@@ -1,0 +1,9 @@
+.block-persons
+    &--grid
+        @include in-page-without-sidebar
+            &:not(.with-description)
+                .top
+                    position: absolute
+            .persons
+                padding-left: offset(4)
+                grid-template-columns: repeat(4, 1fr)
