@@ -3,11 +3,11 @@ title: Footer
 items:
 - title: Découvrir
   slug: decouvrir
-  kind: blank
+  target: https://www.osuny.org
   children:
   - title: CMS d'intérêt général
     slug: cms-d-interet-general
-    target: "https://www.osuny.org/"
+    target: https://www.osuny.org
   - title: Fonctionnalités
     slug: fonctionnalites
     target: "https://www.osuny.org/fonctionnalites/"
@@ -25,23 +25,23 @@ items:
     target: "https://www.osuny.org/tester/"
 - title: Faire
   slug: faire
-  kind: blank
+  target: https://support.osuny.org
   children:
+  - title: Aide
+    slug: aide
+    target: https://support.osuny.org
+  - title: Dev
+    slug: dev
+    target: https://developers.osuny.org
   - title: Thème Figma
     slug: theme-figma
     target: https://www.figma.com/community/file/1176490763864113451
   - title: Composants Figma
     slug: composants-figma
     target: https://www.figma.com/community/file/1603458462925139458
-  - title: Dev
-    slug: dev
-    target: https://developers.osuny.org
-  - title: Aide
-    slug: aide
-    target: https://support.osuny.org
 - title: Prendre soin
   slug: prendre-soin
-  kind: blank
+  target: https://commun.osuny.org
   children:
   - title: Le commun Osuny
     slug: commun
@@ -57,7 +57,7 @@ items:
     target: https://showcase.osuny.org
 - title: Suivre
   slug: suivre
-  kind: blank
+  target: https://status.osuny.org
   children:
   - title: Mastodon
     slug: mastodon
@@ -71,9 +71,6 @@ items:
   - title: LinkedIn
     slug: linkedin
     target: https://www.linkedin.com/company/osuny/
-  - title: Presse
-    slug: presse
-    target: "https://www.osuny.org/espace-presse/"
   - title: Statut
     slug: statut
     target: https://status.osuny.org
