@@ -2,29 +2,13 @@ theme: osuny
 _merge: deep
 params:
   additional_csp: app.cal.com 'unsafe-inline'
-  search:
-    active: true
-    positions:
-      - footer
-  summary:
-    position: hero
   breadcrumb:
     position: after-hero
-  posts:
-    index:
-      layout: grid
-  organizations:
-    single:
-      backlinks: true
-  projects:
-    index:
-      options:
-        summary: false
-    share_links:
-      enabled: false
-  persons:
-    single:
-      backlinks: true
+  components:
+    lightbox:
+      disabled: false
+      in_hero:
+        disabled: true
   home:
     head:
       title: site
@@ -35,8 +19,30 @@ params:
     primary:
       level_1:
         dropdown: false
-  components:
-    lightbox:
-      disabled: false
-      in_hero:
-        disabled: true
+  organizations:
+    single:
+      backlinks: true
+  persons:
+    single:
+      backlinks: true
+  posts:
+    index:
+      layout: grid
+    single:
+      options:
+        updated_at: false
+  projects:
+    index:
+      options:
+        summary: false
+    share_links:
+      enabled: false
+  search:
+    active: true
+    positions:
+      - footer
+  seo:
+    title:
+      separator: "•"
+  summary:
+    position: hero

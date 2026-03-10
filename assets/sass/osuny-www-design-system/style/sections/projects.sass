@@ -1,0 +1,63 @@
+.projects
+    &--grid
+        .project
+            .project-content
+                .project-title
+                    @include meta
+            .media
+                margin-left: 0
+                margin-right: 0
+                margin-bottom: $spacing-2
+        @include media-breakpoint-up(desktop)
+            grid-template-columns: repeat(3, 1fr)
+            .project
+                margin-bottom: $spacing-5
+.projects__section
+    .project
+        .media
+            background: $color-background-alt
+            padding: $spacing-5
+            margin-bottom: $spacing-1
+
+.projects__page
+    .hero
+        .container
+            .content
+                .project-infos
+                    display: none
+                figure
+                    background: $color-background-alt
+    @include media-breakpoint-down(desktop)
+        .hero
+            .container
+                .content
+                    figure
+                        margin-left: var(--grid-gutter-negative)
+                        margin-right: var(--grid-gutter-negative)
+                        padding: var(--grid-gutter)
+                        background: $color-background-alt
+    @include media-breakpoint-up(desktop)
+        .hero
+            .container
+                .content
+                    .hero-text
+                        padding-bottom: pxToRem(50)
+                        .hero-actions
+                            margin-top: 0
+                            position: absolute
+                            bottom: pxToRem(-126)
+                    figure
+                        padding: $spacing-5
+                        figcaption
+                            position: relative
+                            &::before
+                                background: none
+                            .credit
+                                background: none
+                                display: block
+        main
+            .toc-container
+                .toc-content
+                    top: pxToRem(300) !important
+    .siblings-navigation
+        display: none

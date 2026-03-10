@@ -18,32 +18,55 @@
                         padding-left: offset(1)
                         width: columns(6)
                         padding-right: 0
+                        .page-title
+                            font-family: $font-inclusive
+                            font-weight: bold
                     .media
                         width: 100%
                         img
                             aspect-ratio: auto
     &--list
         @include in-page-without-sidebar
-            &.with-images
-                padding-left: offset(4)
-            .pages
-                grid-template-columns: repeat(1, 1fr) !important
-        @include in-page-with-or-without-sidebar
-            .pages
-                article
-                    .page-content
-                        display: flex
-                        flex-direction: column
-                        justify-content: center
-                        text-align: center
-                        .page-title
-                            font-size: pxToRem(32)
-                            a
-                                &::after
-                                    content: ""
+            .block-content
+                display: block !important
+                .top
+                    display: flex !important
+                    justify-content: space-between
+                    .block-title
+                        width: columns(4)
+                    .description
+                        width: columns(8)
+                        margin-bottom: $spacing-4
                         p
-                            font-size: pxToRem(32)
-                            font-family: $font-adelphe
-                            line-height: 130%
-                    .media
-                        width: columns(3)
+                            @include lead
+        &:not(.with-images)
+                    .pages
+                        margin-left: offset(4)
+                        li
+                            @include h2
+
+        &.with-images
+            @include in-page-without-sidebar
+                .pages
+                    padding-left: offset(4)
+            @include in-page-with-or-without-sidebar
+                &.with-images
+                    .pages
+                        grid-template-columns: repeat(1, 1fr) !important
+                        article
+                            .page-content
+                                display: flex
+                                flex-direction: column
+                                justify-content: center
+                                text-align: center
+                                .page-title
+                                    font-size: pxToRem(32)
+                                    a
+                                        &::after
+                                            content: ""
+                                p
+                                    font-size: pxToRem(32)
+                                    font-family: $font-adelphe
+                                    line-height: 130%
+                            .media
+                                width: columns(3)

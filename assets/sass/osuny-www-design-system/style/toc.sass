@@ -1,7 +1,10 @@
 .toc-container
     .toc-content
-        .toc-title
-            display: none
+        @include in-page-with-sidebar
+            html.is-scrolling-down &
+                top: calc(var(--header-height) + #{$spacing-3})
+            #toc-title
+                @include sr-only
         .toc-pages
             ol
                 li

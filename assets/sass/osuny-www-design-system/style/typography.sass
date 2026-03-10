@@ -3,3 +3,19 @@ blockquote
     letter-spacing: -3%
 .more
     font-weight: bold
+h2
+    @include in-page-with-sidebar
+        font-family: $font-adelphe
+        font-weight: bold
+        font-size: pxToRem(26)
+
+\:root
+    @include media-breakpoint-between(sm, xl)
+        --h1-size: #{pxToRem(40)}
+        --lead-hero-size: #{pxToRem(28)}
+        --body-size: #{pxToRem(18)}
+        --meta-size: #{pxToRem(14)}
+    @include media-breakpoint-between(xl, xxl)
+        --h1-size: #{pxToRem(54)}
+        --h2-size: #{pxToRem(36)}
+        --lead-hero-size: #{pxToRem(36)}
