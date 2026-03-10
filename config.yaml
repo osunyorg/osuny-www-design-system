@@ -1,6 +1,7 @@
 theme: osuny
 _merge: deep
 params:
+  additional_csp: app.cal.com 'unsafe-inline'
   search:
     active: true
     positions:
