@@ -26,27 +26,47 @@
                         img
                             aspect-ratio: auto
     &--list
-        @include in-page-without-sidebar
-            &.with-images
-                padding-left: offset(4)
-            .pages
-                grid-template-columns: repeat(1, 1fr) !important
-        @include in-page-with-or-without-sidebar
-            .pages
-                article
-                    .page-content
+        &:not(.with-images)
+            @include in-page-without-sidebar
+                .block-content
+                    display: block
+                    .top
                         display: flex
-                        flex-direction: column
-                        justify-content: center
-                        text-align: center
-                        .page-title
-                            font-size: pxToRem(32)
-                            a
-                                &::after
-                                    content: ""
-                        p
-                            font-size: pxToRem(32)
-                            font-family: $font-adelphe
-                            line-height: 130%
-                    .media
-                        width: columns(3)
+                        justify-content: space-between
+                        .block-title
+                            width: columns(4)
+                        .description
+                            width: columns(8)
+                            margin-bottom: $spacing-4
+                            p
+                                font-weight: normal
+                    .pages
+                        margin-left: offset(4)
+                        li
+                            @include h2
+
+        &.with-images
+            @include in-page-without-sidebar
+                .pages
+                    padding-left: offset(4)
+            @include in-page-with-or-without-sidebar
+                &.with-images
+                    .pages
+                        grid-template-columns: repeat(1, 1fr) !important
+                        article
+                            .page-content
+                                display: flex
+                                flex-direction: column
+                                justify-content: center
+                                text-align: center
+                                .page-title
+                                    font-size: pxToRem(32)
+                                    a
+                                        &::after
+                                            content: ""
+                                p
+                                    font-size: pxToRem(32)
+                                    font-family: $font-adelphe
+                                    line-height: 130%
+                            .media
+                                width: columns(3)
