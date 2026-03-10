@@ -26,20 +26,20 @@
                         img
                             aspect-ratio: auto
     &--list
+        @include in-page-without-sidebar
+            .block-content
+                display: block !important
+                .top
+                    display: flex !important
+                    justify-content: space-between
+                    .block-title
+                        width: columns(4)
+                    .description
+                        width: columns(8)
+                        margin-bottom: $spacing-4
+                        p
+                            @include lead
         &:not(.with-images)
-            @include in-page-without-sidebar
-                .block-content
-                    display: block
-                    .top
-                        display: flex
-                        justify-content: space-between
-                        .block-title
-                            width: columns(4)
-                        .description
-                            width: columns(8)
-                            margin-bottom: $spacing-4
-                            p
-                                font-weight: normal
                     .pages
                         margin-left: offset(4)
                         li
