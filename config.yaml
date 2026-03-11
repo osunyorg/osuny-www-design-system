@@ -15,10 +15,6 @@ params:
   logo:
     header: '/assets/images/logo-osuny.svg'
     footer: '/assets/images/logo-osuny.svg'
-  menu:
-    primary:
-      level_1:
-        dropdown: false
   organizations:
     single:
       backlinks: true

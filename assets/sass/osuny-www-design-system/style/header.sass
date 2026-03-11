@@ -35,10 +35,20 @@ header#document-header
 
 .has-menu-opened
     header#document-header
-        @include media-breakpoint-down(desktop)
-            background: $color-text !important
+        background: $color-text !important
+        *
             color: $color-background !important
-            .logo
-                filter: invert(1)
-            nav
+        #navigation
+            .nav-level-1
+                > li
+                    > .dropdown-menu
+                        max-height: none
+                        background: $color-text !important
+                        @include media-breakpoint-up(desktop)
+                            height: calc(100vh - var(--header-height))
+        .logo
+            filter: invert(1)
+
+        nav
+            @include media-breakpoint-down(desktop)
                 min-height: 100vh
