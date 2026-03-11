@@ -1,99 +1,37 @@
 header#document-header
-    background: none !important
-    transform: none !important
-    // TODO Remove that
-    .upper-menu
-        display: none !important
-    // TODO end
     .menu-class-cta
-        @include media-breakpoint-down(desktop)
-            text-align: right
-            margin-top: $spacing-4
         a
-            @include button-reversed
-            color: $color-text !important
-            border: 1px solid $color-background !important
-            font-weight: normal !important
-            padding: $spacing-2 $spacing-3 !important            
+            @include button
+            font-weight: normal
+            padding: pxToRem(4) pxToRem(10) pxToRem(5)
+            min-width: auto
+            line-height: 100%
+            @include media-breakpoint-up(desktop)
+                margin-left: $spacing-2
             @include media-breakpoint-down(desktop)
-                padding-left: $spacing-3 !important
-                padding-right: $spacing-3 !important
-            &:hover
-                background: $color-text
-                color: $color-background !important
-    .primary-menu
-        .header-button
-            display: flex
-            align-items: center
-            flex-direction: row-reverse
-            &[aria-expanded="true"]
+                background: $color-background
+                color: $color-text !important
+    @include media-breakpoint-down(desktop)
+        .primary-menu
+            .header-button
+                display: flex
+                align-items: center
+                flex-direction: row-reverse
+                &[aria-expanded="true"]
+                    span:last-of-type::before
+                        transform: translateY(1px)
+                span:first-of-type
+                    @include small
+                    text-transform: none
                 span:last-of-type::before
-                    transform: translateY(1px)
-            span:first-of-type
-                @include small
-                text-transform: none
-            span:last-of-type::before
-                content: "●"
-        #navigation
-            .nav-level-1
-                > li
-                    border-bottom: none
-                    > a,
-                    > span
-                        @include body-text
-                        font-weight: bold
-                        padding-bottom: pxToRem(8)
-            .nav-level-2
-                > li
-                    > a
-                        @include small
-        @include media-breakpoint-down(desktop)
-            #navigation
-                padding-top: 0
-        @include media-breakpoint-up(desktop)
-            background: none
-            #navigation
-                position: fixed
-                top: -100%
-                transition: all 0.25s
-                background: $color-text
-                left: 0
-                right: 0
-                padding-bottom: var(--grid-gutter)
-                padding-top: $spacing-6
-                z-index: -1
-                *
-                    color: $color-background
-                .nav-level-1
-                    @include container
-                    > li
-                        width: offset(2)
-                        > a,
-                        > span
-                            padding: 0
-                .nav-level-2
-                    margin-left: $offset-small
+                    content: "●"
 
 .has-menu-opened
     header#document-header
-        .logo
-            filter: invert(1)
-    @include media-breakpoint-down(desktop)
-        header#document-header
+        @include media-breakpoint-down(desktop)
             background: $color-text !important
             color: $color-background !important
+            .logo
+                filter: invert(1)
             nav
                 min-height: 100vh
-            .nav-level-2
-                li
-                    display: inline-table
-                    margin-right: $spacing-2
-                    a:before
-                        content: "→ "
-    @include media-breakpoint-up(desktop)
-        header#document-header
-            .primary-menu
-                .header-button
-                    color: $color-background
-                #navigation
-                    top: 0
