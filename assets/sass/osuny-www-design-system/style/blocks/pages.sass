@@ -1,5 +1,12 @@
 .block-pages
     @include in-page-without-sidebar
+        .top
+            a::after
+                content: ""
+        &.with-description
+            .top
+                .block-title
+                    padding-top: pxToRem(19)
         &:not(.with-description)
             .top
                 position: absolute
