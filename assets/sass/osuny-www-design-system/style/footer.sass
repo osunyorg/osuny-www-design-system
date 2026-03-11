@@ -7,8 +7,12 @@ footer#document-footer
         .footer-logo
             margin-bottom: $spacing-4
         .footer-baseline
-            font-size: var(--h2-size)
-            line-height: 120%
+            letter-spacing: -5%
+            font-size: pxToRem(32)
+            line-height: 110%
+            @include media-breakpoint-up(desktop)
+                font-size: pxToRem(48)
+                margin-top: pxToRem(-7)
         .footer-menu
             .nav-footer
                 @include small
@@ -32,8 +36,6 @@ footer#document-footer
                 .footer-logo
                     width: offset(4)
                 .footer-baseline
-                    margin-top: pxToRem(7)
-                    text-align: left
                     width: columns(8)
             .footer-menu
                 margin-top: $spacing-6

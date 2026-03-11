@@ -3,7 +3,7 @@ _merge: deep
 params:
   additional_csp: app.cal.com 'unsafe-inline'
   breadcrumb:
-    position: after-hero
+    position: footer
   components:
     lightbox:
       disabled: false
