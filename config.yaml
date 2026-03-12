@@ -12,6 +12,13 @@ params:
   home:
     head:
       title: site
+  image_sizes:
+    _default:
+      layouts:
+        alternate:
+          mobile:   360
+          tablet:   600
+          desktop:  800
   logo:
     header: '/assets/images/logo-osuny.svg'
     footer: '/assets/images/logo-osuny.svg'
