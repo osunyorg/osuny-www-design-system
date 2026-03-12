@@ -1,4 +1,4 @@
-{{ if and .Params.breadcrumb (eq site.Params.breadcrumb.position "footer") }}
+{{ if eq site.Params.breadcrumb.position "footer" }}
   <div class="breadcrumb-container">
     <div class="container">
       {{ partial "header/breadcrumbs.html" . }}
