@@ -25,6 +25,9 @@ params:
   organizations:
     single:
       backlinks: true
+  pages:
+    index:
+      truncate_description: 0
   persons:
     single:
       backlinks: true
