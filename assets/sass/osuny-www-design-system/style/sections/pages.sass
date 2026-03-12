@@ -4,3 +4,23 @@
             .media
                 img
                     aspect-ratio: auto !important
+    &--alternate
+        @include in-page-without-sidebar
+            width: 100% !important
+            margin-left: 0 !important
+            margin-right: 0 !important
+            li
+                width: columns(7)
+                .page
+                    margin-bottom: space(50)
+                    .page-title
+                        @include h2
+                        margin-bottom: $spacing-3
+                        margin-left: offset(1)
+                        order: 0
+                    .media
+                        order: 1 !important
+                    p
+                        order: 2
+                        margin-left: offset(1)
+                        width: columns(4)
