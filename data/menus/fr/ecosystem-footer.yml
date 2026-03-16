@@ -20,7 +20,7 @@ items:
   - title: Tarifs
     slug: tarifs
     target: "https://www.osuny.org/tarifs/"
-  - title: Tester Osuny
+  - title: Tester osuny
     slug: tester-osuny
     target: "https://www.osuny.org/tester/"
 - title: Faire
@@ -43,7 +43,7 @@ items:
   slug: prendre-soin
   target: https://commun.osuny.org
   children:
-  - title: Le commun Osuny
+  - title: Le commun osuny
     slug: commun
     target: https://commun.osuny.org
   - title: Transparence
