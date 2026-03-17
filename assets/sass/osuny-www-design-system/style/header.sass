@@ -10,9 +10,11 @@ header#document-header
         a
             @include button
             font-weight: normal
-            padding: pxToRem(4) pxToRem(10) pxToRem(5)
+            padding: pxToRem(4) pxToRem(8) pxToRem(6) pxToRem(10)
             min-width: auto
             line-height: 100%
+            &::after
+                content: " ●"
             @include media-breakpoint-up(desktop)
                 margin-left: $spacing-2
             @include media-breakpoint-down(desktop)
