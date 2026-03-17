@@ -1,11 +1,12 @@
 .block-pages
+    .top
+        a::after
+            content: ""
     @include in-page-without-sidebar
-        .top
-            a::after
-                content: ""
         &.with-description
             .top
                 .block-title
+                    // Font perfectly aligned
                     padding-top: pxToRem(19)
         &:not(.with-description)
             .top
@@ -17,23 +18,42 @@
     &--large
         @include in-page-without-sidebar
             .pages
-                padding-left: offset(4)
                 .page
-                    flex-direction: column
+                    flex-direction: row-reverse
                     align-items: start
+                    justify-content: space-between
                     .page-content
-                        padding-left: offset(1)
-                        width: columns(6)
+                        width: columns(4)
                         padding-right: 0
                         .page-title
-                            font-family: $font-inclusive
-                            font-weight: bold
+                            @include h2
                     .media
-                        width: 100%
+                        width: columns(7)
                         img
                             aspect-ratio: auto
     &--list
+        .pages
+            .page
+                a
+                    @include arrow-right-hover
+                    justify-content: start !important
+                    text-decoration: none !important
+                    // Animated arrow after
+                    &::after
+                        position: relative !important
+                        padding-left: $spacing-2
+                    // No arrow before
+                    &::before
+                        display: none !important
+        @include media-breakpoint-down(desktop)
+            .top
+                .description
+                    p
+                        @include lead
         @include in-page-without-sidebar
+            &:not(.with-images)
+                .pages
+                    margin-left: offset(4)
             .block-content
                 display: block !important
                 .top
@@ -44,36 +64,34 @@
                     .description
                         width: columns(8)
                         margin-bottom: $spacing-4
-                        p
-                            @include lead
+                    p
+                        @include lead
         &:not(.with-images)
-                    .pages
-                        margin-left: offset(4)
-                        li
-                            @include h2
-
+            .pages
+                li
+                    @include h2
         &.with-images
             @include in-page-without-sidebar
                 .pages
                     padding-left: offset(4)
             @include in-page-with-or-without-sidebar
-                &.with-images
-                    .pages
-                        grid-template-columns: repeat(1, 1fr) !important
-                        article
-                            .page-content
-                                display: flex
-                                flex-direction: column
-                                justify-content: center
-                                text-align: center
-                                .page-title
-                                    font-size: pxToRem(32)
-                                    a
-                                        &::after
-                                            content: ""
-                                p
-                                    font-size: pxToRem(32)
-                                    font-family: $font-adelphe
-                                    line-height: 130%
-                            .media
-                                width: columns(3)
+                .pages
+                    grid-template-columns: repeat(1, 1fr) !important
+                    article
+                        .page-content
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            text-align: center
+                            .page-title
+                                font-size: pxToRem(32)
+                                a
+                                    &::after
+                                        content: ""
+                            p
+                                font-size: pxToRem(32)
+                                font-family: $font-adelphe
+                                line-height: 130%
+                        .media
+                            width: columns(3)
