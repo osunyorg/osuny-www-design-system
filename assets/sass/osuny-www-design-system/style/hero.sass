@@ -10,25 +10,41 @@
 .projects__page
     @include media-breakpoint-up(desktop)
         .hero
-            .container
-                .content
-                    flex-direction: column
-                    .hero-text
-                        width: 100%
-                        padding-bottom: 0
-                        margin-bottom: $spacing-5
-                        hgroup
+            &:not(.hero--with-image)
+                .container
+                    .content
+                        .hero-text
                             width: 100%
-                            display: flex
-                            justify-content: space-between
-                            h1
-                                position: relative
-                                width: columns(4)
-                                z-index: 0
-                            p
-                                width: columns(8)
-                                margin-top: pxToRem(10)
-                                text-align: center
-                    figure
-                        width: columns(8)
-                        margin-left: offset(4)
+                            padding-bottom: 0
+                            margin-bottom: $spacing-5
+                            hgroup
+                                h1,
+                                p
+                                    font-size: var(--h1-size)
+                                    display: inline
+                                h1
+                                    &::after
+                                        content: " ● "
+            &.hero--with-image
+                .container
+                    .content
+                        flex-direction: column
+                        .hero-text
+                            width: 100%
+                            padding-bottom: 0
+                            margin-bottom: $spacing-5
+                            hgroup
+                                width: 100%
+                                display: flex
+                                justify-content: space-between
+                                h1
+                                    position: relative
+                                    width: columns(4)
+                                    z-index: 0
+                                p
+                                    width: columns(8)
+                                    margin-top: pxToRem(10)
+                                    text-align: center
+                        figure
+                            width: columns(8)
+                            margin-left: offset(4)
