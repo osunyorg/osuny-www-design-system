@@ -1,9 +1,4 @@
 .pages
-    &--large
-        article
-            .media
-                img
-                    aspect-ratio: auto !important
     &--alternate
         @include in-page-without-sidebar
             width: 100% !important
@@ -24,3 +19,41 @@
                         order: 2
                         margin-left: offset(1)
                         width: columns(4)
+    &--large
+        article
+            .media
+                img
+                    aspect-ratio: auto !important
+    &--list
+        .page
+            a
+                @include arrow-right-hover
+                justify-content: start !important
+                text-decoration: none !important
+                // Animated arrow after
+                &::after
+                    position: relative !important
+                    padding-left: $spacing-2
+                // No arrow before
+                &::before
+                    display: none !important
+        @include in-page-with-or-without-sidebar
+            grid-template-columns: repeat(1, 1fr) !important
+            .page
+                position: relative
+                .page-content
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    text-align: center
+                    .page-title
+                        font-size: pxToRem(32)
+                        a
+                            @include stretched-link
+                    p
+                        font-size: pxToRem(24)
+                        font-family: $font-adelphe
+                        line-height: 130%
+                .media
+                    width: columns(3) !important

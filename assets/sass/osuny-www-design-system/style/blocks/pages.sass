@@ -32,19 +32,6 @@
                         img
                             aspect-ratio: auto
     &--list
-        .pages
-            .page
-                a
-                    @include arrow-right-hover
-                    justify-content: start !important
-                    text-decoration: none !important
-                    // Animated arrow after
-                    &::after
-                        position: relative !important
-                        padding-left: $spacing-2
-                    // No arrow before
-                    &::before
-                        display: none !important
         @include media-breakpoint-down(desktop)
             .top
                 .description
@@ -74,24 +61,3 @@
             @include in-page-without-sidebar
                 .pages
                     padding-left: offset(4)
-            @include in-page-with-or-without-sidebar
-                .pages
-                    grid-template-columns: repeat(1, 1fr) !important
-                    article
-                        .page-content
-                            display: flex
-                            flex-direction: column
-                            justify-content: center
-                            align-items: center
-                            text-align: center
-                            .page-title
-                                font-size: pxToRem(32)
-                                a
-                                    &::after
-                                        content: ""
-                            p
-                                font-size: pxToRem(32)
-                                font-family: $font-adelphe
-                                line-height: 130%
-                        .media
-                            width: columns(3)
