@@ -5,9 +5,6 @@ items:
   slug: decouvrir
   target: https://www.osuny.org
   children:
-  - title: CMS d'intérêt général
-    slug: cms-d-interet-general
-    target: https://www.osuny.org
   - title: Fonctionnalités
     slug: fonctionnalites
     target: "https://www.osuny.org/fonctionnalites/"
