@@ -56,6 +56,9 @@ items:
   slug: suivre
   target: https://status.osuny.org
   children:
+  - title: Contact
+    slug: contact
+    target: https://www.osuny.org/contact
   - title: Mastodon
     slug: mastodon
     target: https://mastodon.social/@osuny
