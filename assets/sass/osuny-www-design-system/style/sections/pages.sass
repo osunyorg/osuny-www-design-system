@@ -26,17 +26,14 @@
                     aspect-ratio: auto !important
     &--list
         .page
-            a
-                @include arrow-right-hover
-                justify-content: start !important
-                text-decoration: none !important
-                // Animated arrow after
+            &-title
+                @include small-arrow-right-hover
                 &::after
-                    position: relative !important
-                    padding-left: $spacing-2
-                // No arrow before
-                &::before
-                    display: none !important
+                    font-size: 0.8em
+                    opacity: 0
+                &:hover
+                    &::after
+                        opacity: 1
         @include in-page-with-or-without-sidebar
             grid-template-columns: repeat(1, 1fr) !important
             .page
