@@ -5,3 +5,16 @@
                 .post-title
                     a
                         text-decoration: underline
+.posts__page
+    @include media-breakpoint-up(desktop)
+        .hero
+            padding-bottom: 2rem 
+            .container
+                .content
+                    align-items: end
+                    flex-direction: row-reverse
+                    .hero-text
+                        width: columns(8)
+                        margin-bottom: pxToRem(-10)
+                    figure
+                        width: columns(4)
