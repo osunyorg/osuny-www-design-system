@@ -23,7 +23,17 @@ footer#document-footer
                         font-weight: bold
                     .nav-level-2
                         margin-top: $spacing-2
-                        margin-left: $offset-small
+                        @include media-breakpoint-up(desktop)
+                            margin-left: $offset-small
+                @include media-breakpoint-down(desktop)
+                    > li
+                        padding-bottom: $spacing-3
+                        border-bottom: $color-border 1px solid
+                        margin-bottom: $spacing-3
+                        > a
+                            position: absolute
+                        ul
+                            margin-left: 50%
         .footer-legals
             @include meta
             .footer-credit
