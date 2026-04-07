@@ -2,7 +2,9 @@
     figure
         background: $color-background-alt
         padding: $spacing-3
-
+    @include media-breakpoint-down(desktop)
+        .top
+            margin-bottom: $spacing-2
     @include in-page-without-sidebar
         .block-title
             @include h2
