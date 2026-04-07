@@ -19,6 +19,11 @@ params:
           mobile:   360
           tablet:   600
           desktop:  800
+    blocks:
+      chapter:
+        mobile:   350
+        tablet:   450
+        desktop:  1000
   logo:
     header: '/assets/images/logo-osuny.svg'
     footer: '/assets/images/logo-osuny.svg'

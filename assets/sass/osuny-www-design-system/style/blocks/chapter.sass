@@ -1,8 +1,29 @@
 .block-chapter
+    @include in-page-without-sidebar
+        &.block-class-reverse
+            .chapter
+                figure
+                    order: -1
+        .block-title
+            @include h2
+        .chapter
+            .text
+                width: columns(5)
+            figure
+                width: columns(7)
     @include in-page-with-sidebar
         .chapter
             .text
                 width: columns(6)
+    &--alt_background
+        background: none
+        .chapter
+            .text
+                line-height: var(--lead-line-height)
+                font-size: var(--lead-size)
+                font-family: $font-inclusive
+                @include in-page-without-sidebar
+                    width: columns(9) !important
     &--accent_background
         .chapter
             .text
