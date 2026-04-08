@@ -32,9 +32,13 @@
             .text
                 line-height: var(--lead-line-height)
                 font-size: var(--lead-size)
-                font-family: $font-inclusive
-                @include in-page-without-sidebar
-                    width: columns(9) !important
+        &:not(.block-chapter--with-image)
+            .chapter
+                .text
+                    @include in-page-without-sidebar
+                        text-align: center
+                        width: columns(8) !important
+                        margin-left: offset(2)
     &--accent_background
         .chapter
             .text
