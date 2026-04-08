@@ -14,13 +14,16 @@
                 margin-right: offset(1)
             figure
                 padding: $spacing-5
-                width: offset(6)
+                margin-right: var(--grid-gutter-negative)
+                width: calc((var(--grid-gutter) + var(--column-width) * 6) + var(--grid-gutter) * 5.5)
         &.block-class-reverse
             .chapter
                 .text
                     margin-left: offset(1)
                     margin-right: 0
                 figure
+                    margin-right: 0
+                    margin-left: var(--grid-gutter-negative)
                     order: -1
     @include in-page-with-sidebar
         .chapter
