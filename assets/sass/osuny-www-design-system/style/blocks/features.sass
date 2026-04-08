@@ -28,6 +28,12 @@
                             display: block
                     .features
                         display: grid
+    &.block-class-features-with-checkbox
+        .feature-content
+            .name
+                &::before
+                    content: "☑ "
+                    color: $color-text-alt
     .feature
         margin-bottom: $spacing-3
         .name
