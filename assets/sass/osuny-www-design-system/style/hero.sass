@@ -5,6 +5,10 @@
             a
                 padding-left: $spacing-3
                 padding-right: $spacing-3
+        hgroup.has-lead
+            > p
+                @include media-breakpoint-down(desktop)
+                margin-top: 0
 .events__section,
 .pages__section,
 .projects__section,
