@@ -3,6 +3,8 @@
         .container
             .block-content
                 .top
+                    @include in-page-without-sidebar
+                        margin-left: offset(4)
                     .block-title
                         cursor: pointer
                         @include icon(arrow-down-s-line, after)
