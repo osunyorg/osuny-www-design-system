@@ -31,9 +31,14 @@
     &.block-class-features-with-checkbox
         .feature-content
             .name
+                display: flex
+                align-items: center
+                @include icon(check-line, before)
                 &::before
-                    content: "☑ "
-                    color: $color-text-alt
+                    border: 1px solid $color-text
+                    font-size: 0.65em
+                    vertical-align: middle
+                    margin-right: $spacing-2
     .feature
         margin-bottom: $spacing-3
         .name
