@@ -33,12 +33,14 @@
             .name
                 display: flex
                 align-items: center
+                height: pxToRem(30)
+                line-height: 120% !important
                 @include icon(check-line, before)
                 &::before
                     border: 1px solid $color-text
                     font-size: 0.65em
                     vertical-align: middle
-                    margin-right: $spacing-2
+                    margin-right: pxToRem(15)
     .feature
         margin-bottom: $spacing-3
         .name
@@ -49,6 +51,17 @@
             picture
                 img
                     margin: 0
+    &--list
+        .features
+            .feature
+                padding-top: 0
+            .feature-content
+                .name
+                    @include body-text
+                    font-weight: bold
+                > div
+                    @include in-page-without-sidebar
+                        width: columns(8)
     @include in-page-with-sidebar
         .block-content
             ul
