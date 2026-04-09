@@ -36,6 +36,9 @@ items:
   - title: Composants Figma
     slug: composants-figma
     target: https://www.figma.com/community/file/1603458462925139458
+  - title: Statut
+    slug: statut
+    target: https://status.osuny.org
 - title: Prendre soin
   slug: prendre-soin
   target: https://commun.osuny.org
@@ -52,9 +55,9 @@ items:
   - title: Sites créés
     slug: sites-crees
     target: https://showcase.osuny.org
-- title: Suivre
-  slug: suivre
-  target: https://status.osuny.org
+- title: Échanger
+  slug: echanger
+  target: https://www.osuny.org/contact
   children:
   - title: Contact
     slug: contact
@@ -71,6 +74,3 @@ items:
   - title: LinkedIn
     slug: linkedin
     target: https://www.linkedin.com/company/osuny/
-  - title: Statut
-    slug: statut
-    target: https://status.osuny.org
