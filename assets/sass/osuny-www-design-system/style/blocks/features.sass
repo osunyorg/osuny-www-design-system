@@ -46,33 +46,19 @@
                     font-size: 0.65em
                     vertical-align: middle
                     margin-right: pxToRem(15)
-    .feature
-        margin-bottom: $spacing-3
-        .name
-            @include h3
-            font-family: $font-adelphe
-        figure
-            margin-bottom: $spacing-2
-            picture
-                img
-                    margin: 0
     &--list
         .features
             .feature
+                margin-bottom: $spacing-3
                 padding-top: 0
-            .feature-content
-                .name
-                    @include body-text
-                    font-weight: bold
-                > div
-                    @include in-page-without-sidebar
-                        width: columns(8)
-    @include in-page-with-sidebar
-        .block-content
-            ul
-                .name
-                    + div
-                        margin-left: offset(1)
-                        width: columns(5)
+                .feature-content
+                    .name
+                        @include body-text
+                        font-weight: bold
+                    > div
+                        @include in-page-without-sidebar
+                            width: columns(8)
+
+    // Cumul de blocs features
     + .block-features
         margin-top: calc(-1 * var(--block-space-y) + 1rem)
