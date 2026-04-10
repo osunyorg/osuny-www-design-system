@@ -20,6 +20,20 @@ header#document-header
             @include media-breakpoint-down(desktop)
                 background: $color-background
                 color: $color-text !important
+    @include media-breakpoint-up(desktop)
+        .nav-level-1
+            li:not(.menu-class-cta)
+                a.active
+                    &::after
+                        background: $color-text
+                        border-radius: 2px
+                        content: ""
+                        display: block
+                        height: 2px
+                        margin-left: auto
+                        margin-right: auto
+                        margin-top: 2px
+                        width: 12px
     @include media-breakpoint-down(desktop)
         .primary-menu
             .header-button
