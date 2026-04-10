@@ -23,17 +23,16 @@ header#document-header
     @include media-breakpoint-up(desktop)
         .nav-level-1
             li:not(.menu-class-cta)
+                position: relative
                 a.active
-                    &::after
+                    &::before
                         background: $color-text
-                        border-radius: 2px
                         content: ""
                         display: block
-                        height: 2px
-                        margin-left: auto
-                        margin-right: auto
-                        margin-top: 2px
-                        width: 12px
+                        height: 3px
+                        position: absolute
+                        top: -22px
+                        width: calc(100% - 1.6rem)
     @include media-breakpoint-down(desktop)
         .primary-menu
             .header-button
