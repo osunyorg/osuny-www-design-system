@@ -2,19 +2,19 @@
     &.block-class-collapsed
         .container
             .block-content
+                border-bottom: 1px solid black
                 .top
+                    width: 100%
+                    margin-bottom: space(4)
                     .block-title
-                        cursor: pointer
                         @include icon(arrow-down-s-line, after)
+                        font-family: $font-adelphe
+                        display: flex
+                        cursor: pointer
                         &::after
-                            background: $color-background-alt
-                            border-radius: 6px
-                            display: inline-block
-                            margin-left: $spacing-2
-                            padding: 2px 8px
-                            transition: transform 0.2s ease
-                        @include in-page-without-sidebar
-                            margin-left: offset(4)
+                            display: block
+                            line-height: 130%
+                            margin-left: auto
                     .description
                         display: none
                 .features
@@ -27,10 +27,8 @@
                             &::after
                                 transform: rotate(-180deg)
                         .description
-                            border-top: 1px solid $color-border
-                            margin-top: $spacing-2
-                            padding-top: $spacing-2
                             display: block
+                            margin-top: $spacing-2
                     .features
                         display: grid
     &.block-class-features-with-checkbox
@@ -57,6 +55,8 @@
                         margin-bottom: $spacing-1
     &--list
         .features
+            border-top: var(--border-width) solid var(--color-border)
+            padding-top: $spacing-3
             .feature
                 margin-bottom: $spacing-3
                 padding-top: 0
