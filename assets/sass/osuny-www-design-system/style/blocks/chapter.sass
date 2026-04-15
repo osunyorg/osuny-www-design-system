@@ -25,29 +25,30 @@
                     margin-right: 0
                     margin-left: var(--grid-gutter-negative)
                     order: -1
-    @include in-page-with-sidebar
-        .chapter
-            .text
-                width: columns(6)
-    &--alt_background
-        background: none
-        .chapter
-            .text
-                line-height: var(--lead-line-height)
-                font-size: var(--lead-size)
-        &:not(.block-chapter--with-image)
+    &--no_background
+        @include in-page-with-sidebar
             .chapter
                 .text
-                    @include in-page-without-sidebar
+                    width: columns(6)
+    &--alt_background
+        @include in-page-without-sidebar
+            background: none
+            .chapter
+                .text
+                    line-height: var(--lead-line-height)
+                    font-size: var(--lead-size)
+            &:not(.block-chapter--with-image)
+                .chapter
+                    .text
                         width: columns(8)
     &--accent_background
-        .chapter
-            .text
-                @include h1
         @include in-page-without-sidebar
+            background: none
             margin-top: space(32) !important
             .chapter
                 .text
+                    @include h1
                     text-align: center
                     margin-right: 0
                     width: 100%
+                    color: $color-text
