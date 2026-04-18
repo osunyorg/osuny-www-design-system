@@ -2,5 +2,7 @@
     .media
         background: transparent
         border: 1px solid $color-border
+        @include media-breakpoint-up(desktop)
+            padding: $spacing-4
         img
             mix-blend-mode: multiply
