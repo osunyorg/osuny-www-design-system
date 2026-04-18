@@ -42,6 +42,12 @@
                     .text
                         width: columns(8)
     &--accent_background
+        @include media-breakpoint-down(desktop)
+            background: none
+            .chapter
+                .text
+                    @include h2
+                    color: $color-text
         @include in-page-without-sidebar
             background: none
             margin-top: space(32) !important
