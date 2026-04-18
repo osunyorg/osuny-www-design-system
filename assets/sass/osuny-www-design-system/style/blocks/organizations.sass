@@ -1,5 +1,6 @@
 .block-organizations
     &--grid
+        grid-gap: 0 var(--grid-gutter)
         @include in-page-without-sidebar
             .top
                 width: columns(4)
@@ -9,11 +10,9 @@
             .organizations
                 padding-left: offset(4)
                 grid-template-columns: repeat(4, 1fr)
-
-    .organization-content
-        display: none
-    .organizations--grid
-        grid-gap: 0 var(--grid-gutter)
+    &.block-class-logo-wall
+        .organization-content
+            display: none
     .organization
         .media
             border: none
