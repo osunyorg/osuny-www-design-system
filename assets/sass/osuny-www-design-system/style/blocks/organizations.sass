@@ -1,18 +1,18 @@
 .block-organizations
     &--grid
-        grid-gap: 0 var(--grid-gutter)
-        @include in-page-without-sidebar
-            .top
-                width: columns(4)
-            &:not(.with-description)
+        &.block-class-logo-wall
+            grid-gap: 0 var(--grid-gutter)
+            @include in-page-without-sidebar
                 .top
-                    position: absolute
-            .organizations
-                padding-left: offset(4)
-                grid-template-columns: repeat(4, 1fr)
-    &.block-class-logo-wall
-        .organization-content
-            display: none
+                    width: columns(4)
+                &:not(.with-description)
+                    .top
+                        position: absolute
+                .organizations
+                    padding-left: offset(4)
+                    grid-template-columns: repeat(4, 1fr)
+            .organization-content
+                display: none
     .organization
         .media
             border: none
