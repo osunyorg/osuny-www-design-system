@@ -1,0 +1,26 @@
+// title-left
+// specific class to align top + description
+// content aligned (left) with description
+.block-class-title-left
+    @include in-page-without-sidebar
+        .block-content
+            display: block !important
+
+        .top
+            display: flex !important
+            align-items: baseline !important
+            gap: var(--grid-gutter)
+            
+            .block-title
+                width: columns(4) !important
+            
+            .description
+                flex: 1
+                margin-bottom: $spacing-4
+                margin-top: 0
+                p
+                    @include lead
+            
+            + *
+                margin-left: offset(4)
+                width: columns(8)
