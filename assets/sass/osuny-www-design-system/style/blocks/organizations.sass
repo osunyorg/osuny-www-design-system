@@ -4,9 +4,7 @@
             grid-gap: 0 var(--grid-gutter)
             @include in-page-without-sidebar
                 .top
-                    display: flex
-                    align-items: baseline
-                    gap: var(--grid-gutter)
+                    @include top-flex
                     width: columns(12)
                     .block-title
                         width: columns(4)
