@@ -2,19 +2,6 @@
     .top
         a::after
             content: ""
-    @include in-page-without-sidebar
-        &.with-description
-            .top
-                .block-title
-                    // Font perfectly aligned
-                    padding-top: pxToRem(19)
-        &:not(.with-description)
-            .top
-                position: absolute
-    &--grid
-        @include in-page-without-sidebar
-            .pages
-                padding-left: offset(4)
     &--large
         @include in-page-without-sidebar
             .pages
@@ -35,22 +22,6 @@
         @include media-breakpoint-down(desktop)
             .top
                 .description
-                    p
-                        @include lead
-        @include in-page-without-sidebar
-            &:not(.with-images)
-                .pages
-                    margin-left: offset(4)
-            .block-content
-                display: block !important
-                .top
-                    display: flex !important
-                    justify-content: space-between
-                    .block-title
-                        width: columns(4)
-                    .description
-                        width: columns(8)
-                        margin-bottom: $spacing-4
                     p
                         @include lead
         &:not(.with-images)

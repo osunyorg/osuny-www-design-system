@@ -1,0 +1,26 @@
+.page__home
+    .block-pages
+        @include in-page-without-sidebar
+            .block-content
+                display: flex
+                gap: var(--grid-gutter)
+                .top
+                    .block-title
+                        width: columns(4)
+                        @include in-page-without-sidebar
+            &--list
+                &:not(.with-images)
+                    .pages
+                        margin-left: offset(4)
+                .block-content
+                    display: block !important
+                    .top
+                        display: flex !important
+                        justify-content: space-between
+                        .block-title
+                            width: columns(4)
+                        .description
+                            width: columns(8)
+                            margin-bottom: $spacing-4
+                            p
+                                @include lead
