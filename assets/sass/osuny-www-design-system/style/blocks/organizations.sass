@@ -2,20 +2,13 @@
     &--grid
         &.block-class-logo-wall
             grid-gap: 0 var(--grid-gutter)
-            @include in-page-without-sidebar
-                .top
-                    @include top-flex
-                    width: columns(12)
-                    .block-title
-                        width: columns(4)
-                    .description
-                        margin-top: 0
-                &:not(.with-description)
-                    .top
-                        position: absolute
-                .organizations
-                    padding-left: offset(4)
-                    grid-template-columns: repeat(4, 1fr)
+            // @include in-page-without-sidebar
+            //     &:not(.with-description)
+            //         .top
+            //             position: absolute
+            //     .organizations
+            //         padding-left: offset(4)
+            //         grid-template-columns: repeat(4, 1fr)
             .organization-content
                 display: none
             .organization

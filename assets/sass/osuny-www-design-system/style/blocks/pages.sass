@@ -27,25 +27,6 @@
             .description
                 p
                     @include lead
-
-    // specific class to align top + description
-    // content aligned (left) with description
-    &.block-class-flex-top
-        @include in-page-without-sidebar
-            &:not(.with-images)
-                .pages
-                    margin-left: offset(4)
-            &.with-description
-                .top
-                    @include top-flex
-                    .block-title
-                        width: columns(4) !important
-                    .description
-                        flex: 1
-                        margin-bottom: $spacing-4
-                        p
-                            @include lead
-                .pages
-                    margin-left: offset(4)
-            .block-content
-                display: block !important
+        .pages.title-only
+            .page
+                @include h2
