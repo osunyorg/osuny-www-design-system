@@ -2,6 +2,11 @@
 // specific class to align top + description
 // content aligned (left) with description
 .block-class-title-left
+    .top
+        .description
+            p
+                @include lead
+                
     @include in-page-without-sidebar
         .block-content
             display: block !important
