@@ -6,10 +6,22 @@
     </div>
   {{ end }}
 {{ else if and (eq .Type "organizations") (eq .Kind "page")  }}
+  {{ if in .Params.organizations_categories "implication/agences-osuny" }}
+    <div class="osuny-badge">
+      <img  src="/assets/images/osuny-badges/agence-osuny-horizontal-clair.svg"
+            alt="Freelance osuny - Cette organisation soutient osuny pour œuvrer à un numérique d’intérêt général." />
+    </div>
+  {{ end }}
   {{ if in .Params.organizations_categories "implication/soutiens-osuny" }}
     <div class="osuny-badge">
       <img  src="/assets/images/osuny-badges/soutien-osuny-horizontal-clair.svg"
-            alt="Freelance osuny - Cette organisation soutient osuny pour œuvrer à un numérique d’intérêt général." />
+            alt="Freelance osuny - Cette organisation soutient osuny pour œuvrer à un numérique d’intérêt général." />
+    </div>
+  {{ end }}
+  {{ if in .Params.organizations_categories "implication/contribs-osuny" }}
+    <div class="osuny-badge">
+      <img  src="/assets/images/osuny-badges/contrib-osuny-horizontal-clair.svg"
+            alt="Freelance osuny - Cette organisation soutient osuny pour œuvrer à un numérique d’intérêt général." />
     </div>
   {{ end }}
 {{ end }}
