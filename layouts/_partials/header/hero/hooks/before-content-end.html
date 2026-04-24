@@ -1,27 +1,44 @@
+{{ $color := "clair"}}
 {{ if and (eq .Type "persons") (eq .Kind "page")  }}
-  {{ if in .Params.persons_categories "implication/freelances" }}
-    <div class="osuny-badge">
-      <img  src="/assets/images/osuny-badges/freelance-osuny-horizontal-clair.svg"
-            alt="Freelance osuny - Cette personne s’appuie sur osuny pour œuvrer à un numérique d’intérêt général." />
-    </div>
-  {{ end }}
+  <div class="osuny-badges">
+    {{ if in .Params.persons_categories "implication/freelances" }}
+      <a href="/personnes/categories/implication/freelances">
+        <img  src="/assets/images/osuny-badges/freelance-osuny-horizontal-{{$color}}.svg"
+              alt="Freelance osuny - Cette personne s’appuie sur osuny pour œuvrer à un numérique d’intérêt général." />
+      </a>
+    {{ end }}
+    {{ if in .Params.persons_categories "implication/commoners" }}
+      <a href="/personnes/categories/implication/makers">
+        <img  src="/assets/images/osuny-badges/maker-osuny-horizontal-{{$color}}.svg"
+              alt="Freelance osuny - Cette personne produit avec osuny pour œuvrer à un numérique d’intérêt général." />
+      </a>
+    {{ end }}
+    {{ if in .Params.persons_categories "implication/commoners" }}
+      <a href="/personnes/categories/implication/commoners">
+        <img  src="/assets/images/osuny-badges/commoner-osuny-horizontal-{{$color}}.svg"
+              alt="Freelance osuny - Cette personne s'implique dans la vie du commun osuny." />
+      </a>
+    {{ end }}
+  </div>
 {{ else if and (eq .Type "organizations") (eq .Kind "page")  }}
+  <div class="osuny-badges">
   {{ if in .Params.organizations_categories "implication/agences-osuny" }}
-    <div class="osuny-badge">
-      <img  src="/assets/images/osuny-badges/agence-osuny-horizontal-clair.svg"
+    <a href="/organisations/categories/implication/agences-osuny">
+      <img  src="/assets/images/osuny-badges/agence-osuny-horizontal-{{$color}}.svg"
             alt="Freelance osuny - Cette organisation soutient osuny pour œuvrer à un numérique d’intérêt général." />
-    </div>
+    </a>
   {{ end }}
   {{ if in .Params.organizations_categories "implication/soutiens-osuny" }}
-    <div class="osuny-badge">
-      <img  src="/assets/images/osuny-badges/soutien-osuny-horizontal-clair.svg"
+    <a href="/organisations/categories/implication/soutiens-osuny">
+      <img  src="/assets/images/osuny-badges/soutien-osuny-horizontal-{{$color}}.svg"
             alt="Freelance osuny - Cette organisation soutient osuny pour œuvrer à un numérique d’intérêt général." />
-    </div>
+    </a>
   {{ end }}
   {{ if in .Params.organizations_categories "implication/contribs-osuny" }}
-    <div class="osuny-badge">
-      <img  src="/assets/images/osuny-badges/contrib-osuny-horizontal-clair.svg"
+    <a href="/organisations/categories/implication/contribs-osuny">
+      <img  src="/assets/images/osuny-badges/contrib-osuny-horizontal-{{$color}}.svg"
             alt="Freelance osuny - Cette organisation soutient osuny pour œuvrer à un numérique d’intérêt général." />
-    </div>
+    </a>
   {{ end }}
+  </div>
 {{ end }}
