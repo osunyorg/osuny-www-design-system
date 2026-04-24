@@ -1,4 +1,7 @@
-{{ $color := "clair"}}
+{{ $color := "clair" }}
+{{ if site.Params.organizations.dark_logo_background }}
+  {{ $color = "sombre" }}
+{{ end }}
 {{ if and (eq .Type "persons") (eq .Kind "page")  }}
   <div class="osuny-badges">
     {{ if in .Params.persons_categories "implication/freelances" }}
