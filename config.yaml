@@ -40,8 +40,9 @@ params:
     index:
       layout: grid
     single:
-      options:
-        updated_at: false
+      meta:
+        options:
+          updated_at: false
   projects:
     index:
       options:
