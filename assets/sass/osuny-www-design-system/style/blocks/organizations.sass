@@ -1,8 +1,9 @@
 .block-organizations
     &--grid
         &.block-class-logo-wall
-            .organization-content
-                display: none
+            .organization-title
+                span
+                    @include sr-only
             .organization
                 .media
                     border: none
@@ -16,4 +17,3 @@
                             object-position: left
                             &:hover
                                 filter: none
-                                
