@@ -1,3 +1,9 @@
+backlinks:
+  events: Événements
+  exhibitions: Expositions
+  pages: Pages
+  posts: Actualités
+  projects: Projets
 baseline: Un <a href="https://commun.osuny.org">commun numérique libre</a> <span>pour <a href="https://www.osuny.org">des sites accessibles, éco‑conçus, qualitatifs, souverains et sécurisés.</a></span>
 commons:
   menu:

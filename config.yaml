@@ -47,6 +47,11 @@ params:
     index:
       options:
         summary: false
+    single:
+      meta:
+        position: hero
+        options:
+          year: false
     share_links:
       enabled: false
   search:
