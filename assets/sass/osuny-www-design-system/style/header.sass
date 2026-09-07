@@ -22,7 +22,7 @@ header#document-header
                 color: $color-text !important
     @include media-breakpoint-up(desktop)
         .nav-level-1
-            li:not(.menu-class-cta)
+            li:not(.has-children):not(.menu-class-cta)
                 position: relative
                 a.active
                     &::before
