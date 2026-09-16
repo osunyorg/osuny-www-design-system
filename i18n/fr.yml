@@ -4,7 +4,7 @@ backlinks:
   pages: Pages
   posts: Actualités
   projects: Projets
-baseline: Un <a href="https://commun.osuny.org">commun numérique libre</a> <span>pour <a href="https://www.osuny.org">des sites accessibles, éco‑conçus, qualitatifs, souverains et sécurisés.</a></span>
+baseline: Un <a href="https://commun.osuny.org">commun numérique</a> <a href="https://www.osuny.org/engagements/liberte/">libre</a> <span>pour des sites <a href="https://www.osuny.org/engagements/accessibilite/">accessibles</a>, <a href="https://www.osuny.org/engagements/sobriete/">éco‑conçus</a>, <a href="https://www.osuny.org/engagements/qualite/">qualitatifs</a>, <a href="https://www.osuny.org/engagements/souverainete/">souverains</a> et <a href="https://www.osuny.org/engagements/securite/">sécurisés</a>.</span>
 commons:
   menu:
     title: navigation
